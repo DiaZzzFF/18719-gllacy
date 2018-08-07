@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Dias Valeev](https://up.htmlacademy.ru/htmlcss/22/user/18719).
-* Наставник: [Наталья Лоскутова].
+* Наставник: [Наталья Лоскутова](https://up.htmlacademy.ru/htmlcss/22/user/33515).
 
 ---
 
