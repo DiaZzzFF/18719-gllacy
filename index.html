@@ -6,11 +6,11 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-header-logo">
+      <a class="main-header-logo">
           <img src="https://placehold.it/154x64" width="154" height="64" alt="Логотип магазина Глейси">
-        </a>
+      </a>
 
+      <nav class="main-navigation">
         <ul class="site-navigation">
           <li>
             <a class="site-navigation-focused" href="catalog.html">Каталог</a>
@@ -26,17 +26,11 @@
           <li><a href="#">О Компании</a></li>
         </ul>
 
-        <ul class="user-search">
-          <li class="user-search-icon"></li>
-        </ul>
-
-        <ul class="user-navigation">
-          <li class="user-navigation-login">Вход</li>
-        </ul>
-
-        <ul class="user-shopping">
-          <li class="user-shopping-status">Пусто</li>
-        </ul>
+        <div class="user">
+          <span class="user-search"></span>
+          <span class="user-navigation">Вход</span>
+          <span class="user-shopping">Пусто</span>
+        </div>
       </nav>
 
       <div class="contacts">
@@ -46,6 +40,8 @@
     </header>
 
     <main class="container">
+      <h1 class="visually-hidden">Магазин Глэйси</h1>
+
       <section class="slider">
         <div class="slider-slide">
           <p class="slider-slide-text">Крем-брюле и пломбир с малиновым джемом</p>
@@ -68,6 +64,20 @@
           </ul>
         </div>
       </section>
+
+      <h2 class="visually-hidden">Акции</h2>
+
+      <section class="banner">
+        <b>Малинка даром!</b>
+        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+        <a class="orange-btn" href="#">Хочу варенье!</a>
+      </section>
+
+      <section class="banner">
+          <b>Шоколадки даром!</b>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a class="orange-btn" href="#">Хочу шоколадки!</a>
+        </section>
     </main>
 
     <footer class="main-footer">
