@@ -12,24 +12,24 @@
 
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li>
-            <a class="site-navigation-focused" href="catalog.html">Каталог</a>
+          <li class="site-navigation-item">
+            <a class="site-navigation-item-focused" href="catalog.html">Каталог</a>
             <ul class="site-navigation-submenu">
-              <li><a href="#">Новинки</a></li>
-              <li><a href="#">Сливочное</a></li>
-              <li><a href="#">Щербеты</a></li>
-              <li><a href="#">Фруктовый лед</a></li>
-              <li><a href="#">Мелорин</a></li>
+              <li class="site-navigation-submenu-item"><a href="#">Новинки</a></li>
+              <li class="site-navigation-submenu-item"><a href="catalog.html">Сливочное</a></li>
+              <li class="site-navigation-submenu-item"><a href="#">Щербеты</a></li>
+              <li class="site-navigation-submenu-item"><a href="#">Фруктовый лед</a></li>
+              <li class="site-navigation-submenu-item"><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О Компании</a></li>
+          <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
+          <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
 
-        <div class="user">
-          <span class="user-search"></span>
-          <span class="user-navigation">Вход</span>
-          <span class="user-shopping">Пусто</span>
+        <div class="user-tools">
+          <span class="user-tools-search"></span>
+          <span class="user-tools-navigation">Вход</span>
+          <span class="user-tools-shopping">Пусто</span>
         </div>
       </nav>
 
@@ -59,7 +59,7 @@
         </div>
 
         <div class="slider-pagination">
-          <ul>
+          <ul class="slider-pagination-list">
             <li class="slider-pagination-item slider-pagination-item-current"><a>1</a></li>
             <li class="slider-pagination-item"><a href="#">2</a></li>
             <li class="slider-pagination-item"><a href="#">3</a></li>
@@ -69,57 +69,59 @@
 
       <h2 class="visually-hidden">Акции</h2>
 
-      <section class="banner">
+      <section class="banner-raspberry">
         <b>Малинка даром!</b>
-        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+        <p>
+          При покупке 2 кг любого фруктового мороженого, добавим
+          в ваш заказ банку малинового варенья бесплатно.
+        </p>
         <a class="orange-btn" href="#">Хочу варенье!</a>
       </section>
 
-      <section class="banner">
+      <section class="banner-chocolate">
           <b>Шоколадки даром!</b>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <p>
+            При покупке 2 кг пломбира, добавим в ваш заказ упаковку
+            вкуснейшей шоколадной присыпки совершенно бесплатно.
+          </p>
           <a class="orange-btn" href="#">Хочу шоколадки!</a>
       </section>
 
       <h2 class="visually-hidden">Хиты продаж</h2>
 
       <section class="catalog-hits">
-        <ul>
-          <li>
-            <span class="catalog-hits-icon"></span>
+        <ul class="catalog-hits-list">
+          <li class="catalog-hits-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p class="catalog-hits-price">
+            <p class="item-price">
               310
-              <span class="catalog-hits-weight">/кг</span>
+              <span class="weight">/кг</span>
             </p>
-            <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </li>
-          <li>
-            <span class="catalog-hits-icon"></span>
+          <li class="catalog-hits-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <p class="catalog-hits-price">
+            <p class="item-price">
               380
-              <span class="catalog-hits-weight">/кг</span>
+              <span class="weight">/кг</span>
             </p>
-            <p>Сливочно-кофейное с кусочками шоколада</p>
+            <h3>Сливочно-кофейное с кусочками шоколада</h3>
           </li>
-          <li>
-            <span class="catalog-hits-icon"></span>
+          <li class="catalog-hits-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p class="catalog-hits-price">
+            <p class="item-price">
               355
-              <span class="catalog-hits-weight">/кг</span>
+              <span class="weight">/кг</span>
             </p>
-            <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+            <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </li>
-          <li>
-            <span class="catalog-hits-icon"></span>
+          <li class="catalog-hits-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <p class="catalog-hits-price">
+            <p class="item-price">
               415
-              <span class="catalog-hits-weight">/кг</span>
+              <span class="weight">/кг</span>
             </p>
-            <p>Сливочное крем-брюле с карамельной подливкой</p>
+            <h3>Сливочное крем-брюле с карамельной подливкой</h3>
           </li>
         </ul>
       </section>
@@ -129,18 +131,15 @@
           Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
           производства на развес
         </strong>
-
-        <ul>
-          <li>
-            <span class="icon"></span>
+        <ul class="description-list">
+          <li class="description-item">
             <p>
               Все наше мороженое изготавливается на собственном
               производстве, с использованием современного оборудования
               и проверенных временем технологий.
             </p>
           </li>
-          <li>
-            <span class="icon"></span>
+          <li class="description-item">
             <p>
               Для приготовления мороженого используются настоящие
               сливки и молоко высочайшего качества. Все дополнительные
@@ -148,16 +147,14 @@
               экологически чистого сырья.
             </p>
           </li>
-          <li>
-            <span class="icon"></span>
+          <li class="description-item">
             <p>
               Закупка ингредиентов  производится только у проверенных
               фермерских хозяйств и компаний, с которыми нас связывает
               долговременное сотрудничество.
             </p>
           </li>
-          <li>
-            <span class="icon"></span>
+          <li class="description-item">
             <p>
               Доставка нашего мороженого до заказчиков осуществляется
               в специальном термопаке, который не дает мороженому
@@ -169,7 +166,7 @@
 
       <article class="blog">
         <p>Новое в нашем блоге</p>
-        <a href="#">
+        <a class="blog-link" href="#">
           10 способов сервировки
           фруктовых щербетов к
           столу
@@ -177,7 +174,7 @@
       </article>
 
       <section class="subscription">
-        <p>
+        <p class="subscription-text">
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
           всего самого вкусного, что у нас происходит. Обещаем не спамить
           и не слать всякой ненужной ерунды. Честно =)
@@ -207,29 +204,29 @@
 
     <footer class="main-footer">
       <div class="main-footer-social">
-        <ul>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">ВКонтакте</a></li>
+        <ul class="main-footer-social-list">
+          <li class="main-footer-social-item"><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
+          <li class="main-footer-social-item"><a class="social-btn social-btn-instagram" href="#">Инстаграм</a></li>
+          <li class="main-footer-social-item"><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+          <li class="main-footer-social-item"><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
         </ul>
       </div>
 
       <nav class="main-footer-menu">
-        <ul>
-          <li><a class="main-footer-menu-special" href="#">Для поставщиков</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
+        <ul class="main-footer-menu-list">
+          <li class="main-footer-menu-item"><a class="main-footer-menu-item-special" href="#">Для поставщиков</a></li>
+          <li class="main-footer-menu-item"><a href="#">О производстве</a></li>
+          <li class="main-footer-menu-item"><a href="#">Наши документы</a></li>
+          <li class="main-footer-menu-item"><a href="#">Экологические стандарты</a></li>
         </ul>
       </nav>
 
       <div class="main-footer-copyright">
-        <a class="main-footer-copyright-btn-logo" href="https://htmlacademy.ru">
+        <a class="main-footer-copyright-btn-logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="https://placehold.it/108x39" width="108" height="39" alt="HTML Academy">
         </a>
         <p>
-          Сделано в <a class="main-footer-copyright-btn" href="https://htmlacademy.ru">HTML Academy</a> © 2017
+          Сделано в <a class="main-footer-copyright-btn" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
         </p>
       </div>
     </footer>
