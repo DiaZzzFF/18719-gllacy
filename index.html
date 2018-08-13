@@ -6,9 +6,9 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">
+      <div class="main-header-logo">
           <img src="https://placehold.it/154x64" width="154" height="64" alt="Логотип GllacyShop">
-      </a>
+      </div>
 
       <nav class="main-navigation">
         <ul class="site-navigation">
@@ -69,59 +69,65 @@
 
       <h2 class="visually-hidden">Акции</h2>
 
-      <section class="banner-raspberry">
-        <b>Малинка даром!</b>
-        <p>
-          При покупке 2 кг любого фруктового мороженого, добавим
-          в ваш заказ банку малинового варенья бесплатно.
-        </p>
-        <a class="orange-btn" href="#">Хочу варенье!</a>
-      </section>
+      <div class="banners">
+        <section class="banner-raspberry">
+          <b>Малинка даром!</b>
+          <p>
+            При покупке 2 кг любого фруктового мороженого, добавим
+            в ваш заказ банку малинового варенья бесплатно.
+          </p>
+          <a class="orange-btn" href="#">Хочу варенье!</a>
+        </section>
 
-      <section class="banner-chocolate">
+        <section class="banner-chocolate">
           <b>Шоколадки даром!</b>
           <p>
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.
           </p>
           <a class="orange-btn" href="#">Хочу шоколадки!</a>
-      </section>
+        </section>
+      </div>
 
       <h2 class="visually-hidden">Хиты продаж</h2>
 
       <section class="catalog-hits">
-        <ul class="catalog-hits-list">
-          <li class="catalog-hits-item">
+        <ul class="catalog-hits-list ice-cream-list">
+          <li class="catalog-hits-item ice-cream-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p class="item-price">
               310
               <span class="weight">/кг</span>
             </p>
-            <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <h3 class="ice-cream-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
           </li>
-          <li class="catalog-hits-item">
+          <li class="catalog-hits-item ice-cream-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p class="item-price">
               380
               <span class="weight">/кг</span>
             </p>
-            <h3>Сливочно-кофейное с кусочками шоколада</h3>
+            <h3 class="ice-cream-item-name">Сливочно-кофейное с кусочками шоколада</h3>
+            <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
           </li>
-          <li class="catalog-hits-item">
+          <li class="catalog-hits-item ice-cream-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p class="item-price">
               355
               <span class="weight">/кг</span>
             </p>
-            <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <h3 class="ice-cream-item-name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
           </li>
-          <li class="catalog-hits-item">
+          <li class="catalog-hits-item ice-cream-item">
             <img src="https://placehold.it/267x267" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p class="item-price">
               415
               <span class="weight">/кг</span>
             </p>
-            <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+            <h3 class="ice-cream-item-name">Сливочное крем-брюле с карамельной подливкой</h3>
+            <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -165,7 +171,7 @@
       </section>
 
       <article class="blog">
-        <p>Новое в нашем блоге</p>
+        <p class="blog-text">Новое в нашем блоге</p>
         <a class="blog-link" href="#">
           10 способов сервировки
           фруктовых щербетов к
