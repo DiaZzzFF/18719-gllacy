@@ -5,83 +5,86 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-    <header class="main-header">
-      <a class="main-header-logo" href="index.html">
+    <div class="wrapper">
+
+    <!-- <<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+      <header class="main-header">
+        <a class="main-header-logo" href="index.html">
           <img src="https://placehold.it/154x64" width="154" height="64" alt="Логотип GllacyShop">
-      </a>
+        </a>
 
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li class="site-navigation-item">
-            <a class="site-navigation-item-focused" href="catalog.html">Каталог</a>
-            <ul class="site-navigation-submenu">
-              <li class="site-navigation-submenu-item"><a href="#">Новинки</a></li>
-              <li class="site-navigation-submenu-item"><a href="catalog.html">Сливочное</a></li>
-              <li class="site-navigation-submenu-item"><a href="#">Щербеты</a></li>
-              <li class="site-navigation-submenu-item"><a href="#">Фруктовый лед</a></li>
-              <li class="site-navigation-submenu-item"><a href="#">Мелорин</a></li>
-            </ul>
-          </li>
-          <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
-          <li class="site-navigation-item"><a href="#">О Компании</a></li>
-        </ul>
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li class="site-navigation-item">
+              <a class="site-navigation-item-focused" href="catalog.html">Каталог</a>
+              <ul class="site-navigation-submenu">
+                <li class="site-navigation-submenu-item"><a href="#">Новинки</a></li>
+                <li class="site-navigation-submenu-item"><a href="catalog.html">Сливочное</a></li>
+                <li class="site-navigation-submenu-item"><a href="#">Щербеты</a></li>
+                <li class="site-navigation-submenu-item"><a href="#">Фруктовый лед</a></li>
+                <li class="site-navigation-submenu-item"><a href="#">Мелорин</a></li>
+              </ul>
+            </li>
+            <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
+            <li class="site-navigation-item"><a href="#">О Компании</a></li>
+          </ul>
 
-        <div class="user-tools">
-          <div class="user-tools-box">
+          <div class="user-tools">
+            <div class="user-tools-box">
               <span class="user-tools-search"></span>
               <!-- Здесь будет форма -->
-          </div>
+            </div>
 
-          <div class="user-tools-box">
-            <span class="user-tools-navigation">Вход</span>
-            <!-- Здесь будет форма -->
-          </div>
+            <div class="user-tools-box">
+              <span class="user-tools-navigation">Вход</span>
+              <!-- Здесь будет форма -->
+            </div>
 
-          <div class="user-tools-box">
-            <span class="user-tools-shopping">2 товара</span>
-            <div class="shopping-box">
-              <table class="shopping-table">
-                <tr class="table-item-row">
-                  <td class="table-item-delete">Х</td>
-                  <td class="table-item-img"></td>
-                  <td class="table-item-name">
-                    Пломбир с апельсиновым джемом
-                  </td>
-                  <td class="table-item-weight">1,5 кг х</td>
-                  <td class="table-item-price">200 руб.</td>
-                  <td class="table-item-multy-price">300 руб.</td>
-                </tr>
-                <tr class="table-item-row">
-                  <td class="table-item-delete">Х</td>
-                  <td class="table-item-img"></td>
-                  <td class="table-item-name">
-                    Клубничный пломбир с присыпкой
-                    из белого шоколада
-                  </td>
-                  <td class="table-item-weight">1,5 кг х</td>
-                  <td class="table-item-price">300 руб</td>
-                  <td class="table-item-multy-price">450 руб</td>
-                </tr>
-              </table>
-              <p class="shopping-total-price">
-                Итого: 750 руб.
-              </p>
-              <a class="orange-btn shopping-btn" href="#">Оформить заказ</a>
+            <div class="user-tools-box">
+              <span class="user-tools-shopping">2 товара</span>
+              <div class="shopping-box">
+                <table class="shopping-table">
+                  <tr class="table-item-row">
+                    <td class="table-item-delete">Х</td>
+                    <td class="table-item-img"></td>
+                    <td class="table-item-name">
+                      Пломбир с апельсиновым джемом
+                    </td>
+                    <td class="table-item-weight">1,5 кг х</td>
+                    <td class="table-item-price">200 руб.</td>
+                    <td class="table-item-multy-price">300 руб.</td>
+                  </tr>
+                  <tr class="table-item-row">
+                    <td class="table-item-delete">Х</td>
+                    <td class="table-item-img"></td>
+                    <td class="table-item-name">
+                      Клубничный пломбир с присыпкой
+                      из белого шоколада
+                    </td>
+                    <td class="table-item-weight">1,5 кг х</td>
+                    <td class="table-item-price">300 руб</td>
+                    <td class="table-item-multy-price">450 руб</td>
+                  </tr>
+                </table>
+                <p class="shopping-total-price">
+                  Итого: 750 руб.
+                </p>
+                <a class="orange-btn shopping-btn" href="#">Оформить заказ</a>
+              </div>
             </div>
           </div>
+        </nav>
+
+        <div class="contacts">
+          <p class="contacts-time">С 10 до 20, ежедневно</p>
+          <p class="contacts-tel">8 812 450-25-25</p>
         </div>
-      </nav>
+      </header>
 
-      <div class="contacts">
-        <p class="contacts-time">С 10 до 20, ежедневно</p>
-        <p class="contacts-tel">8 812 450-25-25</p>
-      </div>
-    </header>
+    <!-- <<<<<<<<<<<<<<< main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-<!-- <<<<<<<<<<<<<<< main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
-    <div class="container">
-      <main class="main">
+      <main class="container">
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
           <li class="breadcrumbs-item"><a href="catalog.html">Каталог</a></li>
@@ -221,38 +224,38 @@
           <a class="catalog-pagination-next" href="#"></a>
         </section>
       </main>
+
+    <!-- <<<<<<<<<<<<<<< footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+      <footer class="main-footer">
+        <div class="main-footer-social">
+          <ul class="main-footer-social-list">
+            <li class="main-footer-social-item"><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
+            <li class="main-footer-social-item"><a class="social-btn social-btn-instagram" href="#">Инстаграм</a></li>
+            <li class="main-footer-social-item"><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+            <li class="main-footer-social-item"><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
+          </ul>
+        </div>
+
+        <nav class="main-footer-menu">
+          <ul class="main-footer-menu-list">
+            <li class="main-footer-menu-item"><a class="main-footer-menu-item-special" href="#">Для поставщиков</a></li>
+            <li class="main-footer-menu-item"><a href="#">О производстве</a></li>
+            <li class="main-footer-menu-item"><a href="#">Наши документы</a></li>
+            <li class="main-footer-menu-item"><a href="#">Экологические стандарты</a></li>
+          </ul>
+        </nav>
+
+        <div class="main-footer-copyright">
+          <a class="main-footer-copyright-btn-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="https://placehold.it/108x39" width="108" height="39" alt="HTML Academy">
+          </a>
+          <p>
+            Сделано в <a class="main-footer-copyright-btn" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+          </p>
+        </div>
+      </footer>
+
     </div>
-
-
-<!-- <<<<<<<<<<<<<<< footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
-    <footer class="main-footer">
-      <div class="main-footer-social">
-        <ul class="main-footer-social-list">
-          <li class="main-footer-social-item"><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
-          <li class="main-footer-social-item"><a class="social-btn social-btn-instagram" href="#">Инстаграм</a></li>
-          <li class="main-footer-social-item"><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
-          <li class="main-footer-social-item"><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
-        </ul>
-      </div>
-
-      <nav class="main-footer-menu">
-        <ul class="main-footer-menu-list">
-          <li class="main-footer-menu-item"><a class="main-footer-menu-item-special" href="#">Для поставщиков</a></li>
-          <li class="main-footer-menu-item"><a href="#">О производстве</a></li>
-          <li class="main-footer-menu-item"><a href="#">Наши документы</a></li>
-          <li class="main-footer-menu-item"><a href="#">Экологические стандарты</a></li>
-        </ul>
-      </nav>
-
-      <div class="main-footer-copyright">
-        <a class="main-footer-copyright-btn-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="https://placehold.it/108x39" width="108" height="39" alt="HTML Academy">
-        </a>
-        <p>
-          Сделано в <a class="main-footer-copyright-btn" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
