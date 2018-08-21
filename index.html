@@ -30,20 +30,46 @@
             <li class="site-navigation-item"><a href="#">О Компании</a></li>
           </ul>
 
-          <div class="user-tools">
-            <div class="user-tools-box">
-              <span class="user-tools-search"></span>
-              <!-- Здесь будет форма -->
-            </div>
+          <div class="user-tools-search">
+            <button class="user-tools-search-btn" aria-label="Поиск по сайту"></button>
 
-            <div class="user-tools-box">
-              <span class="user-tools-navigation">Вход</span>
-              <!-- Здесь будет форма -->
+            <div class="user-tools-search-box">
+              <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
+                <p class="user-tools-search-form-box">
+                  <label class="visually-hidden" for="user-search">Поиск</label>
+                  <input class="user-tools-search-form-field" type="search" name="search" id="user-search" placeholder="Что ищем?">
+                </p>
+              </form>
             </div>
+          </div>
 
-            <div class="user-tools-box">
-              <span class="user-tools-shopping">Пусто</span>
+          <div class="user-tools-navigation">
+            <button class="user-tools-navigation-btn" aria-label="Вход в Личный кабинет">Вход</button>
+
+            <div class="user-tools-navigation-box">
+              <form class="user-tools-navigation-form" action="https://echo.htmlacademy.ru" method="POST">
+                <p class="user-tools-navigation-form-email-box">
+                  <label class="visually-hidden" for="user-email">Электронная почта</label>
+                  <input class="user-tools-navigation-form-email" type="email" name="email" id="user-email" placeholder="Электронная почта">
+                </p>
+
+                <p class="user-tools-navigation-form-password-box">
+                  <label class="visually-hidden" for="user-password">Пароль</label>
+                  <input class="user-tools-navigation-form-password" type="password" name="password" id="user-password" placeholder="Пароль">
+                </p>
+
+                <button class="orange-btn user-tools-navigation-form-submit" type="submit">Войти</button>
+
+                <p class="user-tools-navigation-form-other">
+                  <a class="user-tools-navigation-form-other-recovery" href="#">Забыли пароль?</a>
+                  <a class="user-tools-navigation-form-other-registration" href="#">Новая регистрация</a>
+                </p>
+              </form>
             </div>
+          </div>
+
+          <div class="user-tools-shopping">
+            <button class="user-tools-shopping-btn" aria-label="Ваша корзина">Пусто</button>
           </div>
         </nav>
 
@@ -73,17 +99,15 @@
           </div>
 
           <div class="slider-pagination">
-            <ul class="slider-pagination-list">
-              <li class="slider-pagination-item slider-pagination-item-current"><a>1</a></li>
-              <li class="slider-pagination-item"><a href="#">2</a></li>
-              <li class="slider-pagination-item"><a href="#">3</a></li>
-            </ul>
+            <button class="slider-pagination-item slider-pagination-item-current" aria-label="Переход на слайд 1"></button>
+            <button class="slider-pagination-item" aria-label="Переход на слайд 2"></button>
+            <button class="slider-pagination-item" aria-label="Переход на слайд 3"></button>
           </div>
         </section>
 
-        <h2 class="visually-hidden">Акции</h2>
-
         <div class="banners">
+          <h2 class="visually-hidden">Акции</h2>
+
           <section class="banner-raspberry">
             <b>Малинка даром!</b>
             <p>
@@ -103,9 +127,9 @@
           </section>
         </div>
 
-        <h2 class="visually-hidden">Хиты продаж</h2>
-
         <section class="catalog-hits">
+          <h2 class="visually-hidden">Хиты продаж</h2>
+
           <ul class="catalog-hits-list ice-cream-list">
             <li class="catalog-hits-item ice-cream-item">
               <img src="img/creamy-with-orange-jam-and-citrus-shavings.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -147,10 +171,13 @@
         </section>
 
         <section class="description">
+          <h2 class="visually-hidden">Наши преимущества</h2>
+
           <strong>
             Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
             производства на развес
           </strong>
+
           <ul class="description-list">
             <li class="description-item">
               <p>
@@ -186,6 +213,8 @@
 
         <div class="blog-and-sub">
           <article class="blog">
+            <h2 class="visually-hidden">Блог</h2>
+
             <p class="blog-text">Новое в нашем блоге</p>
             <a class="blog-link" href="#">
               10 способов сервировки
@@ -195,21 +224,33 @@
           </article>
 
           <section class="subscription">
+            <h2 class="visually-hidden">Подписка на рассылку</h2>
+
             <p class="subscription-text">
               Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
               всего самого вкусного, что у нас происходит. Обещаем не спамить
               и не слать всякой ненужной ерунды. Честно =)
             </p>
-            <!-- Здесь будет форма -->
+
+            <div class="subscription-form-box">
+              <form class="subscription-form" action="https://echo.htmlacademy.ru" method="POST">
+                <label class="visually-hidden" for="user-subscription">Электронная почта</label>
+                <input class="subscription-form-email" type="email" name="subscription-email" id="user-subscription" placeholder="Электронная почта">
+
+                <button class="orange-btn subscription-form-btn" type="submit">Отправить</button>
+              </form>
+            </div>
           </section>
         </div>
 
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-
         <section class="map feedback">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+
           <div class="map-img">
             <img src="img/map-and-pin.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
           </div>
+
+          <h4 class="visually-hidden">Наш адрес</h4>
 
           <p>
             Адрес главного офиса
@@ -219,10 +260,13 @@
             ул. Большая Конюшенная
             19/8, Санкт-Петербург
           </p>
+
+          <h4 class="visually-hidden">Наш телефон</h4>
+
           <p>Для заказов по телефону:</p>
           <p class="feedback-bold">8 812 450-25-25</p>
           <p>(с 10 до 20 ежедневно)</p>
-          <span class="orange-btn">Форма обратной связи</span>
+          <button class="orange-btn">Форма обратной связи</button>
         </section>
       </main>
 
@@ -230,11 +274,21 @@
 
       <footer class="main-footer">
         <div class="main-footer-social">
+          <h4 class="visually-hidden">Социальные сети</h4>
+
           <ul class="main-footer-social-list">
-            <li class="main-footer-social-item"><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-instagram" href="#">Инстаграм</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-tw" href="#" aria-label="Следите за нами в Twitter"></a>
+            </li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-instagram" href="#" aria-label="Следите за нами в Instagram"></a>
+            </li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-fb" href="#" aria-label="Следите за нами в Facebook"></a>
+            </li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-vk" href="#" aria-label="Следите за нами в ВКонтакте"></a>
+            </li>
           </ul>
         </div>
 
@@ -261,8 +315,29 @@
 
       <section class="modal modal-map">
         <h2>Мы обязательно вам ответим!</h2>
-        <!-- Здесь будет форма -->
-        <span class="modal-close">x</span>
+
+        <div class="feedback-form-box">
+          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label class="visually-hidden" for="user-feedback-name">Ваше имя</label>
+              <input class="feedback-form-text" type="text" name="name" id="user-feedback-name" placeholder="Как вас зовут?">
+            </p>
+
+            <p>
+              <label class="visually-hidden" for="user-feedback-email">Ваша почта</label>
+              <input class="feedback-form-email" type="email" name="email" id="user-feedback-email" placeholder="Ваша почта для ответа?">
+            </p>
+
+            <p>
+              <label class="visually-hidden" for="user-feedback-review"></label>
+              <textarea class="feedback-form-review" name="review" id="user-feedback-review" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+            </p>
+
+            <button class="orange-btn" type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <button class="modal-close" aria-label="Закрыть окно"></button>
       </section>
 
     </div>
