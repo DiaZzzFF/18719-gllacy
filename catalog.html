@@ -30,48 +30,79 @@
             <li class="site-navigation-item"><a href="#">О Компании</a></li>
           </ul>
 
-          <div class="user-tools">
-            <div class="user-tools-box">
-              <span class="user-tools-search"></span>
-              <!-- Здесь будет форма -->
-            </div>
+          <div class="user-tools-search">
+            <button class="user-tools-search-btn" aria-label="Поиск по сайту"></button>
 
-            <div class="user-tools-box">
-              <span class="user-tools-navigation">Вход</span>
-              <!-- Здесь будет форма -->
-            </div>
-
-            <div class="user-tools-box">
-              <span class="user-tools-shopping">2 товара</span>
-              <div class="shopping-box">
-                <table class="shopping-table">
-                  <tr class="table-item-row">
-                    <td class="table-item-delete">Х</td>
-                    <td class="table-item-img"></td>
-                    <td class="table-item-name">
-                      Пломбир с апельсиновым джемом
-                    </td>
-                    <td class="table-item-weight">1,5 кг х</td>
-                    <td class="table-item-price">200 руб.</td>
-                    <td class="table-item-multy-price">300 руб.</td>
-                  </tr>
-                  <tr class="table-item-row">
-                    <td class="table-item-delete">Х</td>
-                    <td class="table-item-img"></td>
-                    <td class="table-item-name">
-                      Клубничный пломбир с присыпкой
-                      из белого шоколада
-                    </td>
-                    <td class="table-item-weight">1,5 кг х</td>
-                    <td class="table-item-price">300 руб</td>
-                    <td class="table-item-multy-price">450 руб</td>
-                  </tr>
-                </table>
-                <p class="shopping-total-price">
-                  Итого: 750 руб.
+            <div class="user-tools-search-box">
+              <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
+                <p class="user-tools-search-form-box">
+                  <label class="visually-hidden" for="user-search">Поиск</label>
+                  <input class="user-tools-search-form-field" type="search" name="search" id="user-search" placeholder="Что ищем?">
                 </p>
-                <a class="orange-btn shopping-btn" href="#">Оформить заказ</a>
-              </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="user-tools-navigation">
+            <button class="user-tools-navigation-btn" aria-label="Вход в Личный кабинет">Вход</button>
+
+            <div class="user-tools-navigation-box">
+              <form class="user-tools-navigation-form" action="https://echo.htmlacademy.ru" method="POST">
+                <p class="user-tools-navigation-form-email-box">
+                  <label class="visually-hidden" for="user-email">Электронная почта</label>
+                  <input class="user-tools-navigation-form-email" type="email" name="email" id="user-email" placeholder="Электронная почта">
+                </p>
+
+                <p class="user-tools-navigation-form-password-box">
+                  <label class="visually-hidden" for="user-password">Пароль</label>
+                  <input class="user-tools-navigation-form-password" type="password" name="password" id="user-password" placeholder="Пароль">
+                </p>
+
+                <button class="orange-btn user-tools-navigation-form-submit" type="submit">Войти</button>
+
+                <p class="user-tools-navigation-form-other">
+                  <a class="user-tools-navigation-form-other-recovery" href="#">Забыли пароль?</a>
+                  <a class="user-tools-navigation-form-other-registration" href="#">Новая регистрация</a>
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <div class="user-tools-shopping">
+            <button class="user-tools-shopping-btn" aria-label="Ваша корзина">2 товара</button>
+
+            <div class="shopping-box">
+              <table class="shopping-table">
+                <tr class="table-item-row">
+                  <td class="table-item-delete">
+                    <button class="table-item-delete-btn" aria-label="Удалить из корзины"></button>
+                  </td>
+                  <td class="table-item-img"></td>
+                  <td class="table-item-name">
+                    Пломбир с апельсиновым джемом
+                  </td>
+                  <td class="table-item-weight">1,5 кг х</td>
+                  <td class="table-item-price">200 руб.</td>
+                  <td class="table-item-multy-price">300 руб.</td>
+                </tr>
+                <tr class="table-item-row">
+                  <td class="table-item-delete">
+                    <button class="table-item-delete-btn" aria-label="Удалить из корзины"></button>
+                  </td>
+                  <td class="table-item-img"></td>
+                  <td class="table-item-name">
+                    Клубничный пломбир с присыпкой
+                    из белого шоколада
+                  </td>
+                  <td class="table-item-weight">1,5 кг х</td>
+                  <td class="table-item-price">300 руб</td>
+                  <td class="table-item-multy-price">450 руб</td>
+                </tr>
+              </table>
+              <p class="shopping-total-price">
+                Итого: 750 руб.
+              </p>
+              <a class="orange-btn shopping-btn" href="#">Оформить заказ</a>
             </div>
           </div>
         </nav>
@@ -94,7 +125,131 @@
         <h1 class="ice-cream-type">Сливочное мороженое</h1>
 
         <section class="filters">
-          <!-- Здесь будут фильтры -->
+          <h2 class="visually-hidden">Фильтры выбора мороженого</h2>
+
+          <div class="filters-box">
+            <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="filters-form-sorting">
+                <legend class="filters-form-sorting-legend">Сортировка:</legend>
+
+                <select class="filters-form-sorting-select" name="sorting">
+                  <option class="filters-form-sorting-option" value="by popularity" selected>
+                    по популярности
+                  </option>
+                  <option class="filters-form-sorting-option" value="first inexpensive">
+                    сначала недорогие
+                  </option>
+                  <option class="filters-form-sorting-option" value="first expensive">
+                    сначала дорогие
+                  </option>
+                  <option class="filters-form-sorting-option" value="by fat content">
+                    по жирности
+                  </option>
+                </select>
+              </fieldset>
+
+              <fieldset class="filters-form-price">
+                <legend class="filters-form-price-legend">Цена:</legend>
+
+                <div class="filters-form-price">
+                  <label class="filters-form-price-text">
+                    <input class="filters-form-price-min" type="text" name="price-min" value="100">
+                    руб. –
+                  </label>
+
+                  <label class="filters-form-price-text">
+                    <input class="filters-form-price-max" type="text" name="price-max" value="500">
+                    руб.
+                  </label>
+                </div>
+
+                <div class="filters-form-price-range">
+                  <div class="filters-form-price-range-current"></div>
+
+                  <div class="filters-form-price-range-min"></div>
+                  <div class="filters-form-price-range-max"></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="filters-form-fat-content">
+                <legend class="filters-form-fat-content-legend">Жирность:</legend>
+
+                <ul class="filters-form-fat-content-list">
+                  <li class="filters-form-fat-content-item">
+                    <label class="filters-form-fat-content-item-label">
+                      <input class="filters-form-fat-content-item-pick" type="radio" value="0%" name="fat-content">
+                      0%
+                    </label>
+                  </li>
+
+                  <li class="filters-form-fat-content-item">
+                    <label class="filters-form-fat-content-item-label">
+                      <input class="filters-form-fat-content-item-pick" type="radio" value="up to 10%" name="fat-content" checked>
+                      до 10%
+                    </label>
+                  </li>
+
+                  <li class="filters-form-fat-content-item">
+                    <label class="filters-form-fat-content-item-label">
+                      <input class="filters-form-fat-content-item-pick" type="radio" value="up to 30%" name="fat-content">
+                      до 30%
+                    </label>
+                  </li>
+
+                  <li class="filters-form-fat-content-item">
+                    <label class="filters-form-fat-content-item-label">
+                      <input class="filters-form-fat-content-item-pick" type="radio" value="above 30%" name="fat-content">
+                      выше 30%
+                    </label>
+                  </li>
+
+                </ul>
+              </fieldset>
+
+              <fieldset class="filters-form-fillers">
+                <legend class="filters-form-fillers-legend">Наполнители:</legend>
+
+                <ul class="filters-form-fillers-list">
+                  <li class="filters-form-fillers-item">
+                    <label class="filters-form-fillers-item-label">
+                      <input class="filters-form-fillers-item-pick" type="checkbox" name="chocolate" checked>
+                      шоколадные
+                    </label>
+                  </li>
+
+                  <li class="filters-form-fillers-item">
+                    <label class="filters-form-fillers-item-label">
+                      <input class="filters-form-fillers-item-pick" type="checkbox" name="sugar-powders" checked>
+                      сахарные присыпки
+                    </label>
+                  </li>
+
+                  <li class="filters-form-fillers-item">
+                    <label class="filters-form-fillers-item-label">
+                      <input class="filters-form-fillers-item-pick" type="checkbox" name="fruit">
+                      фрукты
+                    </label>
+                  </li>
+
+                  <li class="filters-form-fillers-item">
+                    <label class="filters-form-fillers-item-label">
+                      <input class="filters-form-fillers-item-pick" type="checkbox" name="syrups">
+                      сиропы
+                    </label>
+                  </li>
+
+                  <li class="filters-form-fillers-item">
+                    <label class="filters-form-fillers-item-label">
+                      <input class="filters-form-fillers-item-pick" type="checkbox" name="jams">
+                      джемы
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <button class="filters-form-btn" type="submit">Применить</button>
+            </form>
+          </div>
         </section>
 
         <section class="ice-cream">
@@ -211,17 +366,17 @@
         </section>
 
         <section class="catalog-pagination">
-          <a class="catalog-pagination-prev" href="#"></a>
+          <a class="catalog-pagination-prev" href="#" aria-label="Переход на страницу назад"></a>
 
           <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current"><a>1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item"><a href="#">4</a></li>
-            <li class="pagination-item"><a href="#">5</a></li>
+            <li class="pagination-item pagination-item-current"><a aria-label="Переход на страницу 1">1</a></li>
+            <li class="pagination-item"><a href="#" aria-label="Переход на страницу 2">2</a></li>
+            <li class="pagination-item"><a href="#" aria-label="Переход на страницу 3">3</a></li>
+            <li class="pagination-item"><a href="#" aria-label="Переход на страницу 4">4</a></li>
+            <li class="pagination-item"><a href="#" aria-label="Переход на страницу 5">5</a></li>
           </ul>
 
-          <a class="catalog-pagination-next" href="#"></a>
+          <a class="catalog-pagination-next" href="#" aria-label="Переход на страницу вперёд"></a>
         </section>
       </main>
 
@@ -229,11 +384,21 @@
 
       <footer class="main-footer">
         <div class="main-footer-social">
+          <h4 class="visually-hidden">Социальные сети</h4>
+
           <ul class="main-footer-social-list">
-            <li class="main-footer-social-item"><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-instagram" href="#">Инстаграм</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-vk" href="#">ВКонтакте</a></li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-tw" href="#" aria-label="Следите за нами в Twitter"></a>
+            </li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-instagram" href="#" aria-label="Следите за нами в Instagram"></a>
+            </li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-fb" href="#" aria-label="Следите за нами в Facebook"></a>
+            </li>
+            <li class="main-footer-social-item">
+              <a class="social-btn social-btn-vk" href="#" aria-label="Следите за нами в ВКонтакте"></a>
+            </li>
           </ul>
         </div>
 
