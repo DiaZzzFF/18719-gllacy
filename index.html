@@ -31,16 +31,14 @@
           </ul>
 
           <div class="user-tools-search">
-            <button class="user-tools-search-btn" aria-label="Поиск по сайту"></button>
+            <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
+              <button class="user-tools-search-form-btn" aria-label="Поиск по сайту"></button>
 
-            <div class="user-tools-search-box">
-              <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
-                <p class="user-tools-search-form-box">
-                  <label class="visually-hidden" for="user-search">Поиск</label>
-                  <input class="user-tools-search-form-field" type="search" name="search" id="user-search" placeholder="Что ищем?">
-                </p>
-              </form>
-            </div>
+              <div class="user-tools-search-form-box">
+                <label class="visually-hidden" for="user-search">Поиск</label>
+                <input class="user-tools-search-form-field" type="search" name="search" id="user-search" placeholder="Что ищем?">
+              </div>
+            </form>
           </div>
 
           <div class="user-tools-navigation">
@@ -48,22 +46,22 @@
 
             <div class="user-tools-navigation-box">
               <form class="user-tools-navigation-form" action="https://echo.htmlacademy.ru" method="POST">
-                <p class="user-tools-navigation-form-email-box">
+                <div class="user-tools-navigation-form-box">
                   <label class="visually-hidden" for="user-email">Электронная почта</label>
                   <input class="user-tools-navigation-form-email" type="email" name="email" id="user-email" placeholder="Электронная почта">
-                </p>
+                </div>
 
-                <p class="user-tools-navigation-form-password-box">
+                <div class="user-tools-navigation-form-box">
                   <label class="visually-hidden" for="user-password">Пароль</label>
                   <input class="user-tools-navigation-form-password" type="password" name="password" id="user-password" placeholder="Пароль">
-                </p>
+                </div>
 
                 <button class="orange-btn user-tools-navigation-form-submit" type="submit">Войти</button>
 
-                <p class="user-tools-navigation-form-other">
+                <div class="user-tools-navigation-form-other">
                   <a class="user-tools-navigation-form-other-recovery" href="#">Забыли пароль?</a>
                   <a class="user-tools-navigation-form-other-registration" href="#">Новая регистрация</a>
-                </p>
+                </div>
               </form>
             </div>
           </div>
@@ -316,24 +314,24 @@
       <section class="modal modal-map">
         <h2>Мы обязательно вам ответим!</h2>
 
-        <div class="feedback-form-box">
+        <div class="feedback-box">
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
+            <div class="feedback-form-box">
               <label class="visually-hidden" for="user-feedback-name">Ваше имя</label>
               <input class="feedback-form-text" type="text" name="name" id="user-feedback-name" placeholder="Как вас зовут?">
-            </p>
+            </div>
 
-            <p>
+            <div class="feedback-form-box">
               <label class="visually-hidden" for="user-feedback-email">Ваша почта</label>
               <input class="feedback-form-email" type="email" name="email" id="user-feedback-email" placeholder="Ваша почта для ответа?">
-            </p>
+            </div>
 
-            <p>
+            <div class="feedback-form-box">
               <label class="visually-hidden" for="user-feedback-review"></label>
               <textarea class="feedback-form-review" name="review" id="user-feedback-review" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
-            </p>
+            </div>
 
-            <button class="orange-btn" type="submit">Отправить</button>
+            <button class="orange-btn feedback-form-btn" type="submit">Отправить</button>
           </form>
         </div>
 

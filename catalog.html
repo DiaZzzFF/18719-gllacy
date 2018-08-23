@@ -31,16 +31,14 @@
           </ul>
 
           <div class="user-tools-search">
-            <button class="user-tools-search-btn" aria-label="Поиск по сайту"></button>
+            <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
+              <button class="user-tools-search-form-btn" aria-label="Поиск по сайту"></button>
 
-            <div class="user-tools-search-box">
-              <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
-                <p class="user-tools-search-form-box">
-                  <label class="visually-hidden" for="user-search">Поиск</label>
-                  <input class="user-tools-search-form-field" type="search" name="search" id="user-search" placeholder="Что ищем?">
-                </p>
-              </form>
-            </div>
+              <div class="user-tools-search-form-box">
+                <label class="visually-hidden" for="user-search">Поиск</label>
+                <input class="user-tools-search-form-field" type="search" name="search" id="user-search" placeholder="Что ищем?">
+              </div>
+            </form>
           </div>
 
           <div class="user-tools-navigation">
@@ -48,22 +46,22 @@
 
             <div class="user-tools-navigation-box">
               <form class="user-tools-navigation-form" action="https://echo.htmlacademy.ru" method="POST">
-                <p class="user-tools-navigation-form-email-box">
+                <div class="user-tools-navigation-form-box">
                   <label class="visually-hidden" for="user-email">Электронная почта</label>
                   <input class="user-tools-navigation-form-email" type="email" name="email" id="user-email" placeholder="Электронная почта">
-                </p>
+                </div>
 
-                <p class="user-tools-navigation-form-password-box">
+                <div class="user-tools-navigation-form-box">
                   <label class="visually-hidden" for="user-password">Пароль</label>
                   <input class="user-tools-navigation-form-password" type="password" name="password" id="user-password" placeholder="Пароль">
-                </p>
+                </div>
 
                 <button class="orange-btn user-tools-navigation-form-submit" type="submit">Войти</button>
 
-                <p class="user-tools-navigation-form-other">
+                <div class="user-tools-navigation-form-other">
                   <a class="user-tools-navigation-form-other-recovery" href="#">Забыли пароль?</a>
                   <a class="user-tools-navigation-form-other-registration" href="#">Новая регистрация</a>
-                </p>
+                </div>
               </form>
             </div>
           </div>
