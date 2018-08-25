@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(132, 157, 143);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* =============== site-navigation */
+
+.site-navigation {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.site-navigation-item-link {
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-navigation-item-link:hover {
+  color: rgb(50, 50, 50);
+  border-bottom: none;
+  background-color: rgb(247, 246, 243);
+}
+
+.site-navigation-item-link:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+/* =============== site-navigation-submenu */
+
+.site-navigation-submenu {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.site-navigation-submenu-item:first-of-type{
+  font-weight: 700;
+}
+
+.site-navigation-submenu-item {
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.site-navigation-submenu-item-link {
+  color: rgb(50, 50, 50);
+}
+
+.site-navigation-submenu-item-link:hover {
+  color: rgb(50, 50, 50);
+  background-color: rgb(251, 222, 216);
+}
+
+.site-navigation-submenu-item-link:active {
+  background-color: rgb(246, 181, 165);
+}
+
+/* =====  site-navigation + site-navigation-submenu */
+
+.site-navigation,
+.site-navigation-submenu {
+  list-style: none;
+}
+
+.menu-focus {
+  color: rgb(255, 255, 255);
+  background-color: rgb(208, 112, 88);
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* user-tools-search */
+
+/* user-tools-navigation */
+
+/* user-tools-shopping */
+
+/* contacts */
