@@ -53,7 +53,7 @@
 
               <div class="user-tools-search-form-box">
                 <label class="visually-hidden" for="user-search">Поиск</label>
-                <input class="user-tools-search-form-field" type="search" name="search" id="user-search" placeholder="Что ищем?">
+                <input class="form-text" type="search" name="search" id="user-search" placeholder="Что ищем?">
               </div>
             </form>
           </div>
@@ -65,12 +65,12 @@
               <form class="user-tools-navigation-form" action="https://echo.htmlacademy.ru" method="POST">
                 <div class="user-tools-navigation-form-box">
                   <label class="visually-hidden" for="user-email">Электронная почта</label>
-                  <input class="user-tools-navigation-form-email" type="email" name="email" id="user-email" placeholder="Электронная почта">
+                  <input class="form-text" type="email" name="email" id="user-email" placeholder="Электронная почта">
                 </div>
 
                 <div class="user-tools-navigation-form-box">
                   <label class="visually-hidden" for="user-password">Пароль</label>
-                  <input class="user-tools-navigation-form-password" type="password" name="password" id="user-password" placeholder="Пароль">
+                  <input class="form-text" type="password" name="password" id="user-password" placeholder="Пароль">
                 </div>
 
                 <button class="orange-btn user-tools-navigation-form-submit" type="submit">Войти</button>
@@ -84,7 +84,7 @@
           </div>
 
           <div class="user-tools-shopping">
-            <button class="user-tools-shopping-btn" aria-label="Ваша корзина">2 товара</button>
+            <button class="user-tools-shopping-btn-full" aria-label="Ваша корзина">2 товара</button>
 
             <div class="shopping-box">
               <table class="shopping-table">
@@ -92,26 +92,30 @@
                   <td class="table-item-delete">
                     <button class="table-item-delete-btn" aria-label="Удалить из корзины"></button>
                   </td>
-                  <td class="table-item-img"></td>
-                  <td class="table-item-name">
+                  <td class="table-item-img">
+                    <div class="table-item-img-box table-item-img-1"></div>
+                  </td>
+                  <td class="table-item-text table-item-name">
                     Пломбир с апельсиновым джемом
                   </td>
-                  <td class="table-item-weight">1,5 кг х</td>
-                  <td class="table-item-price">200 руб.</td>
-                  <td class="table-item-multy-price">300 руб.</td>
+                  <td class="table-item-text table-item-weight">1,5 кг х</td>
+                  <td class="table-item-text table-item-price">200 руб.</td>
+                  <td class="table-item-text table-item-multy-price">300 руб.</td>
                 </tr>
                 <tr class="table-item-row">
                   <td class="table-item-delete">
                     <button class="table-item-delete-btn" aria-label="Удалить из корзины"></button>
                   </td>
-                  <td class="table-item-img"></td>
-                  <td class="table-item-name">
+                  <td class="table-item">
+                      <div class="table-item-img-box table-item-img-2"></div>
+                  </td>
+                  <td class="table-item-text table-item-name">
                     Клубничный пломбир с присыпкой
                     из белого шоколада
                   </td>
-                  <td class="table-item-weight">1,5 кг х</td>
-                  <td class="table-item-price">300 руб</td>
-                  <td class="table-item-multy-price">450 руб</td>
+                  <td class="table-item-text table-item-weight">1,5 кг х</td>
+                  <td class="table-item-text table-item-price">300 руб</td>
+                  <td class="table-item-text table-item-multy-price">450 руб</td>
                 </tr>
               </table>
               <p class="shopping-total-price">
