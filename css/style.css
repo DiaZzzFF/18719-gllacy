@@ -337,6 +337,40 @@ a {
   color: rgb(90, 90, 90);
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.main-footer-social-list,
+.main-footer-menu-list {
+  list-style: none;
+}
+
+.footer-link,
+.main-footer-copyright-text {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-footer-menu-item-special {
+  font-weight: 700;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: rgb(255, 188, 158);
+
+  border-bottom-color: rgba(249, 172, 159, 0.302);
+}
+
+.main-footer-copyright-text {
+  font-size: 12px;
+
+  border-bottom: none;
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .feedback-modal-heading {
