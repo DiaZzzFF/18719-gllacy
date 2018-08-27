@@ -272,11 +272,11 @@ a {
 }
 
 .table-item-img-1 {
-  background-image: url("../img/bg-creamy-with-orange-jam-and-citrus-shavings.png");
+  background-image: url("../img/bg-mini-creamy-with-orange-jam-and-citrus-shavings.png");
 }
 
 .table-item-img-2 {
-  background-image: url("../img/bg-creamy-strawberry-with-powder-of-white-chocolate.png");
+  background-image: url("../img/bg-mini-creamy-strawberry-with-powder-of-white-chocolate.png");
 }
 
 .table-item-text {
@@ -318,12 +318,113 @@ a {
 
 /* =============== slider */
 
+.slider-slide {
+  width: 1045px;
+  height: 854px;
+}
+
+/* ===== слайды */
+
+.slider-slide:nth-of-type(1) {
+  background-image: url("../img/bg-creme-brulee-and-sebum-with-raspberry-jam.png");
+  background-repeat: no-repeat;
+}
+
+.slider-slide:nth-of-type(2) {
+  background-color: rgb(137, 150, 166);
+  background-image: url("../img/bg-chocolate-plombir-and-lemon-sorbet.png");
+  background-repeat: no-repeat;
+}
+
+.slider-slide:nth-of-type(3) {
+  background-color: rgb(157, 139, 132);
+  background-image: url("../img/bg-sunburn-with-fondant-and-strawberry-sherbet.png");
+  background-repeat: no-repeat;
+}
+
+/* ===== текст */
+
+.slider-slide-text {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+/* ===== кнопка */
+
 .slider-slide-btn {
   font-size: 32px;
   line-height: 44px;
 }
 
+/* =============== banners */
 
+.banner-raspberry,
+.banner-chocolate {
+  width: 560px;
+  height: 229px;
+
+  border-radius: 15px;
+}
+
+/* ===== bg */
+
+.banner-raspberry {
+  background-color: rgb(112, 22, 42);
+  background-image: url("../img/bg-raspberry.jpg");
+}
+
+.banner-chocolate {
+  background-color: rgb(68, 42, 30);
+  background-image: url("../img/bg-chocolate.jpg");
+}
+
+/* ===== text */
+
+.banners-heading,
+.banners-text {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.banners-heading {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.banners-text {
+  font-size: 18px;
+}
+
+/* =============== blog */
+
+.blog {
+  width: 560px;
+  height: 220px;;
+
+  background-color: rgb(255, 255, 255);
+  background-image: url("../img/bg-strawberry.jpg")
+}
+
+.blog-text,
+.blog-link {
+  color: rgb(50, 50, 50);
+}
+
+.blog-link {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+.blog-link:hover,
+.blog-link:active {
+  color: rgb(232, 77, 55);
+
+  border-bottom-color: rgb(236, 89, 60);
+}
 
 /* =============== подписка */
 
