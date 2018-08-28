@@ -24,17 +24,19 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
   padding: 0;
 
-  border: 0;
+  white-space: nowrap;
 
-  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
@@ -44,9 +46,7 @@ a {
   font-weight: 700;
   color: rgb(255, 255, 255);
 
-  background-image: -moz-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(0deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
   border: none;
   box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
   opacity: 0.988;
@@ -57,18 +57,14 @@ a {
 .orange-btn:hover {
   color: rgb(254, 254, 254);
 
-  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
 }
 
 .orange-btn:active {
   color: rgb(252, 238, 236);
 
-  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: linear-gradient(0deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
@@ -197,13 +193,12 @@ a {
 .form-text {
   font-size: 14px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: 700;
   color: rgb(50, 50, 50);
 
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(178, 178, 178);
   border-radius: 5px;
-  opacity: 0.52;
 }
 
 .subscription-form-text,
@@ -212,13 +207,28 @@ a {
 }
 
 .form-text::-webkit-input-placeholder {
+  font-weight: 400;
   color: rgb(153, 153, 135);
+
+  opacity: 0.52;
 }
 .form-text:-ms-input-placeholder {
+  font-weight: 400;
   color: rgb(153, 153, 135);
+
+  opacity: 0.52;
 }
 .form-text::-ms-input-placeholder {
+  font-weight: 400;
   color: rgb(153, 153, 135);
+
+  opacity: 0.52;
+}
+.form-text::placeholder {
+  font-weight: 400;
+  color: rgb(153, 153, 135);
+
+  opacity: 0.52;
 }
 
 .form-text:hover {
@@ -487,6 +497,198 @@ a {
 .feedback-text-bold:nth-of-type(4),
 .feedback-text:nth-of-type(5) {
   line-height: inherit;
+}
+
+/* ==================== catalog.html ===== */
+
+/* =============== breadcrumbs */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.breadcrumbs-item-link {
+  color: rgb(255, 255, 255);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs-item-link:hover,
+.breadcrumbs-item-link:active {
+  color: rgb(255, 188, 158);
+
+  border-bottom-color: rgba(249, 172, 159, 0.302);
+}
+
+/* =============== h1 */
+
+.ice-cream-type {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+/* =============== filters */
+
+.filters-form-fieldset {
+  border: none;
+}
+
+.filters-form-heading,
+.filters-form-sorting-option {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filters-form-sorting-option {
+  font-weight: 400;
+}
+
+.filters-form-text {
+  line-height: 18px;
+}
+
+.filters-form-sorting-select {
+  color: rgb(255, 255, 255);
+}
+
+.filters-form-sorting-select:hover {
+  color: rgb(50, 50, 50);
+}
+
+.filters-form-price-min,
+.filters-form-price-max {
+  color: rgb(255, 255, 255);
+
+  background-color: transparent;
+  border: none;
+}
+
+.filters-form-ul {
+  list-style: none;
+}
+
+.filters-form-sorting-select,
+.filters-form-price-range-box,
+.filters-form-ul {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+/* ===== range */
+
+.filters-form-price-range-box {
+  width: 220px;
+  height: 37px;
+}
+
+.filters-form-price-range {
+  width: 176px;
+  height: 4px;
+
+  background-color: rgb(248, 247, 244);
+
+  opacity: 0.502;
+}
+
+.filters-form-price-range-current {
+  width: 107px;
+  height: 4px;
+
+  background-color: rgb(248, 247, 244);
+}
+
+.filters-form-price-range-min,
+.filters-form-price-range-max {
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/filter-button.svg");
+}
+
+/* ===== кнопка */
+
+.filters-form-btn {
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+.filters-form-btn:hover {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(255, 255, 255);
+}
+
+.filters-form-btn:active {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+/* =============== карточки с мороженкой */
+
+.ice-cream-list {
+  list-style: none;
+}
+
+.ice-cream-item:hover {
+  background-color: rgba(248, 247, 244, 0.2);
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.ice-cream-item-name {
+  font-weight: inherit;
+
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.item-price,
+.weight {
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.item-price {
+  font-size: 45px;
+}
+
+.weight {
+  font-size: 30px;
+}
+
+/* =============== pagination-catalog.html */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item-link {
+  line-height: 18px;
+  color: inherit;
+}
+
+.pagination-item-link-current {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(255, 255, 255);
+}
+
+.pagination-item-link:hover:not(.pagination-item-link-current) {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 
