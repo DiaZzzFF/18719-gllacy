@@ -12,85 +12,94 @@
 
     <!-- <<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-      <header class="main-header">
-        <div class="main-header-logo">
-          <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
+      <header class="header">
+        <div class="header-row">
+          <div class="header-logo">
+            <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
+          </div>
+
+          <nav class="header-navigation">
+            <ul class="header-menu">
+              <li class="header-menu-item">
+                <a class="header-menu-item-link" href="catalog.html">Каталог</a>
+
+                <ul class="header-submenu">
+                  <li class="header-submenu-item">
+                    <a class="header-submenu-item-link" href="#">Новинки</a>
+                  </li>
+                  <li class="header-submenu-item">
+                    <a class="header-submenu-item-link" href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="header-submenu-item">
+                    <a class="header-submenu-item-link" href="#">Щербеты</a>
+                  </li>
+                  <li class="header-submenu-item">
+                    <a class="header-submenu-item-link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="header-submenu-item">
+                    <a class="header-submenu-item-link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="header-menu-item">
+                <a class="header-menu-item-link" href="#">Доставка и оплата</a>
+              </li>
+
+              <li class="header-menu-item">
+                <a class="header-menu-item-link" href="#">О Компании</a>
+              </li>
+            </ul>
+
+            <div class="user-tools">
+              <div class="user-tools-search">
+                <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
+                  <!-- <button class="user-tools-search-form-btn" aria-label="Поиск по сайту"></button> -->
+
+                  <div class="user-tools-search-form-box">
+                    <label class="visually-hidden" for="user-search">Поиск</label>
+                    <input class="form-text" type="search" name="search" id="user-search" placeholder="Что ищем?">
+                  </div>
+                </form>
+              </div>
+
+              <div class="user-tools-navigation">
+                <button class="user-tools-navigation-btn" aria-label="Вход в Личный кабинет">Вход</button>
+
+                <div class="user-tools-navigation-box">
+                  <form class="user-tools-navigation-form" action="https://echo.htmlacademy.ru" method="POST">
+                    <div class="user-tools-navigation-form-box">
+                      <label class="visually-hidden" for="user-email">Электронная почта</label>
+                      <input class="form-text" type="email" name="email" id="user-email" placeholder="Электронная почта">
+                    </div>
+
+                    <div class="user-tools-navigation-form-box">
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                      <input class="form-text" type="password" name="password" id="user-password" placeholder="Пароль">
+                    </div>
+
+                    <button class="orange-btn user-tools-navigation-form-submit" type="submit">Войти</button>
+
+                    <div class="user-tools-navigation-form-other">
+                      <a class="user-tools-navigation-form-other-recovery" href="#">Забыли пароль?</a>
+                      <a class="user-tools-navigation-form-other-registration" href="#">Новая регистрация</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="user-tools-shopping">
+                <button class="user-tools-shopping-btn" aria-label="Ваша корзина">Пусто</button>
+              </div>
+            </div>
+          </nav>
         </div>
 
-        <nav class="main-navigation">
-          <ul class="site-navigation">
-            <li class="site-navigation-item">
-              <a class="site-navigation-item-link" href="catalog.html">Каталог</a>
-              <ul class="site-navigation-submenu">
-                <li class="site-navigation-submenu-item">
-                  <a class="site-navigation-submenu-item-link" href="#">Новинки</a>
-                </li>
-                <li class="site-navigation-submenu-item">
-                  <a class="site-navigation-submenu-item-link" href="catalog.html">Сливочное</a>
-                </li>
-                <li class="site-navigation-submenu-item">
-                  <a class="site-navigation-submenu-item-link" href="#">Щербеты</a>
-                </li>
-                <li class="site-navigation-submenu-item">
-                  <a class="site-navigation-submenu-item-link" href="#">Фруктовый лед</a>
-                </li>
-                <li class="site-navigation-submenu-item">
-                  <a class="site-navigation-submenu-item-link" href="#">Мелорин</a>
-                </li>
-              </ul>
-            </li>
-            <li class="site-navigation-item">
-              <a class="site-navigation-item-link" href="#">Доставка и оплата</a>
-            </li>
-            <li class="site-navigation-item">
-              <a class="site-navigation-item-link" href="#">О Компании</a>
-            </li>
-          </ul>
-
-          <div class="user-tools-search">
-            <form class="user-tools-search-form" action="https://echo.htmlacademy.ru" method="GET">
-              <button class="user-tools-search-form-btn" aria-label="Поиск по сайту"></button>
-
-              <div class="user-tools-search-form-box">
-                <label class="visually-hidden" for="user-search">Поиск</label>
-                <input class="form-text" type="search" name="search" id="user-search" placeholder="Что ищем?">
-              </div>
-            </form>
+        <div class="header-row">
+          <div class="contacts">
+            <p class="contacts-time">С 10 до 20, ежедневно</p>
+            <p class="contacts-tel">8 812 450-25-25</p>
           </div>
-
-          <div class="user-tools-navigation">
-            <button class="user-tools-navigation-btn" aria-label="Вход в Личный кабинет">Вход</button>
-
-            <div class="user-tools-navigation-box">
-              <form class="user-tools-navigation-form" action="https://echo.htmlacademy.ru" method="POST">
-                <div class="user-tools-navigation-form-box">
-                  <label class="visually-hidden" for="user-email">Электронная почта</label>
-                  <input class="form-text" type="email" name="email" id="user-email" placeholder="Электронная почта">
-                </div>
-
-                <div class="user-tools-navigation-form-box">
-                  <label class="visually-hidden" for="user-password">Пароль</label>
-                  <input class="form-text" type="password" name="password" id="user-password" placeholder="Пароль">
-                </div>
-
-                <button class="orange-btn user-tools-navigation-form-submit" type="submit">Войти</button>
-
-                <div class="user-tools-navigation-form-other">
-                  <a class="user-tools-navigation-form-other-recovery" href="#">Забыли пароль?</a>
-                  <a class="user-tools-navigation-form-other-registration" href="#">Новая регистрация</a>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div class="user-tools-shopping">
-            <button class="user-tools-shopping-btn" aria-label="Ваша корзина">Пусто</button>
-          </div>
-        </nav>
-
-        <div class="contacts">
-          <p class="contacts-time">С 10 до 20, ежедневно</p>
-          <p class="contacts-tel">8 812 450-25-25</p>
         </div>
       </header>
 
@@ -100,18 +109,20 @@
         <h1 class="visually-hidden">Магазин Глэйси</h1>
 
         <section class="slider">
-          <div class="slider-slide">
-            <p class="slider-slide-text">Крем-брюле и пломбир с малиновым джемом</p>
-            <a class="orange-btn slider-slide-btn" href="#">Давайте оба!</a>
-          </div>
-          <div class="slider-slide">
-            <p class="slider-slide-text">Шоколадный пломбир и лимонный сорбет</p>
-            <a class="orange-btn slider-slide-btn" href="#">Давайте оба!</a>
-          </div>
-          <div class="slider-slide">
-            <p class="slider-slide-text">Пломбир с помадкой и клубничный щербет</p>
-            <a class="orange-btn slider-slide-btn" href="#">Давайте оба!</a>
-          </div>
+          <ul class="slider-list">
+            <li class="slider-item">
+              <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="orange-btn slide-btn" href="#" class="orange-btn">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide">
+              <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+              <a class="orange-btn slide-btn" href="#" class="orange-btn">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide">
+              <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+              <a class="orange-btn slide-btn" href="#" class="orange-btn">Давайте оба!</a>
+            </li>
+          </ul>
 
           <div class="slider-pagination">
             <button class="slider-pagination-item slider-pagination-item-current" aria-label="Переход на слайд 1"></button>
@@ -129,7 +140,7 @@
               При покупке 2 кг любого фруктового мороженого, добавим
               в ваш заказ банку малинового варенья бесплатно.
             </p>
-            <a class="orange-btn" href="#">Хочу варенье!</a>
+            <a class="orange-btn banner-raspberry-btn" href="#">Хочу варенье!</a>
           </section>
 
           <section class="banner-chocolate">
@@ -138,7 +149,7 @@
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку
               вкуснейшей шоколадной присыпки совершенно бесплатно.
             </p>
-            <a class="orange-btn" href="#">Хочу шоколадки!</a>
+            <a class="orange-btn banner-chocolate-btn" href="#">Хочу шоколадки!</a>
           </section>
         </div>
 
@@ -153,7 +164,7 @@
                 <span class="weight">/кг</span>
               </p>
               <h3 class="ice-cream-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-              <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
+              <a class="orange-btn ice-cream-item-fast-btn" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-hits-item ice-cream-item">
               <img src="img/creamy-coffee-with-chunks-of-chocolate.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
@@ -162,7 +173,7 @@
                 <span class="weight">/кг</span>
               </p>
               <h3 class="ice-cream-item-name">Сливочно-кофейное с кусочками шоколада</h3>
-              <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
+              <a class="orange-btn ice-cream-item-fast-btn" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-hits-item ice-cream-item">
               <img src="img/creamy-strawberry-with-powder-of-white-chocolate.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
@@ -171,7 +182,7 @@
                 <span class="weight">/кг</span>
               </p>
               <h3 class="ice-cream-item-name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-              <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
+              <a class="orange-btn ice-cream-item-fast-btn" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-hits-item ice-cream-item">
               <img src="img/creamy-creme-brulee-with-caramel-gravy.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
@@ -180,7 +191,7 @@
                 <span class="weight">/кг</span>
               </p>
               <h3 class="ice-cream-item-name">Сливочное крем-брюле с карамельной подливкой</h3>
-              <a class="orange-btn ice-cream-item-fast" href="#">Быстрый просмотр</a>
+              <a class="orange-btn ice-cream-item-fast-btn" href="#">Быстрый просмотр</a>
             </li>
           </ul>
         </section>
@@ -281,7 +292,7 @@
             <p class="feedback-text">Для заказов по телефону:</p>
             <p class="feedback-text-bold">8 812 450-25-25</p>
             <p class="feedback-text">(с 10 до 20 ежедневно)</p>
-            <button class="orange-btn">Форма обратной связи</button>
+            <button class="orange-btn feedback-btn">Форма обратной связи</button>
           </div>
         </section>
       </main>
