@@ -684,7 +684,11 @@ img {
 /* =============== description */
 
 .description {
+  max-height: 306px;
   margin-bottom: 40px;
+  padding: 0 20px;
+  padding-top: 25px;
+  padding-bottom: 24px;
 
   color: rgb(50, 50, 50);
 
@@ -700,11 +704,43 @@ img {
 }
 
 .description-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .description-item {
+  display: flex;
+
+  width: 48.8%;
+  margin-top: 8px;
+
   font-weight: 400;
+}
+
+.description-item:nth-of-type(3),
+.description-item:nth-of-type(4) {
+  margin-top: 9px;
+}
+
+.description-item-icon {
+  margin-right: 8px;
+  width: 49px;
+  height: 49px;
+
+  background-color: black;
+}
+
+.description-item-text {
+  margin: 0;
+  margin-top: 13px;
+
+  width: 89%;
 }
 
 /* =============== blog + sub */
