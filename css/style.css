@@ -64,7 +64,6 @@ img {
   min-width: 900px;
 
   margin: 0 auto;
-  padding: 0 27px;
 
   background-image: url("../img/bg-creme-brulee-and-sebum-with-raspberry-jam.png");
   background-repeat: no-repeat;
@@ -90,7 +89,7 @@ img {
   background-image: url("../img/bg-sunburn-with-fondant-and-strawberry-sherbet.png");
 }
 
-.inner-page {
+.inner-page-wrapper {
   background-image: none;
 }
 
@@ -185,7 +184,7 @@ img {
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .header {
-  margin-bottom: 275px;
+  margin: 0 2.25%;
 }
 
 .header-row {
@@ -549,6 +548,8 @@ img {
 .container {
   display: flex;
   flex-direction: column;
+
+  margin: 0 2.25%;
 }
 
 /* =============== slider */
@@ -605,9 +606,9 @@ img {
 /* ===== текст */
 
 .slide-title {
-  margin: 0 auto;
-
   width: 687px;
+  margin: 0 auto;
+  margin-top: 275px;
   margin-bottom: 30px;
 
   font-size: 60px;
@@ -835,13 +836,9 @@ img {
 /* =============== map // feedback */
 
 .feedback {
-  position: relative;
-  left: -2.3%;
-
   display: flex;
   justify-content: flex-end;
 
-  width: 104.75%;
   min-height: 430px;
 
   background-image: url("../img/map-and-pin.jpg");
@@ -849,7 +846,7 @@ img {
 
 .feedback-box {
   margin-top: 62px;
-  margin-right: 27px;
+  margin-right: 2.25%;
   padding: 25px;
   width: 302px;
   height: 305px;
@@ -911,9 +908,20 @@ img {
 
 /* ==================== catalog.html ===== */
 
+.inner-page-main {
+  padding-bottom: 50px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /* =============== breadcrumbs */
 
 .breadcrumbs {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -939,12 +947,30 @@ img {
 /* =============== h1 */
 
 .ice-cream-type {
+  margin: 0;
+
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
 }
 
 /* =============== filters */
+
+
+.filters-box-row-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.filters-box-row-2 {
+  display: flex;
+}
+
+.filters-form-fillers {
+  width: 60%;
+}
 
 .filters-form-fieldset {
   border: none;
@@ -981,6 +1007,8 @@ img {
 }
 
 .filters-form-ul {
+  display: flex;
+
   list-style: none;
 }
 
@@ -1025,6 +1053,8 @@ img {
 /* ===== кнопка */
 
 .filters-form-btn {
+  max-height: 36px;
+
   font-size: 16px;
   line-height: 18px;
   color: inherit;
@@ -1049,9 +1079,25 @@ img {
 
 /* =============== карточки с мороженкой */
 
+.catalog-hits,
+.ice-cream {
+  max-width: 1172px;
+  text-align: right;
+}
+
+.catalog-hits-list,
 .ice-cream-list {
+
+  margin-top: 34px;
+  margin-bottom: -43px;
+}
+
+.ice-cream-list {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   margin: 0;
   padding: 0;
@@ -1059,14 +1105,18 @@ img {
   list-style: none;
 }
 
+.catalog-hits-list {
+  flex-wrap: nowrap;
+}
+
 .ice-cream-item {
-  position: relative;
-
-  max-width: 267px;
+  max-width: 293px;
   max-height: 405px;
-  text-align: center;
+  padding: 0 1.083%;
+  padding-top: 6px;
+  margin: 0;
 
-  margin-right: 2%;
+  text-align: center;
 }
 
 .ice-cream-item:nth-of-type(4n) {
@@ -1074,16 +1124,13 @@ img {
 }
 
 .ice-cream-item-fast-btn {
-  position: absolute;
-  visibility: hidden;
   width: 200px;
   height: 44px;
+
+  visibility: hidden;
 }
 
 .ice-cream-item:hover {
-  width: 293px;
-  max-height: 405px;
-
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -1121,7 +1168,21 @@ img {
 /* =============== pagination-catalog.html */
 
 .pagination-list {
+  display: flex;
+  justify-content: flex-end;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.pagination-item {
+  margin-right: 5px;
+}
+
+.pagination-item:last-of-type {
+  margin-right: 0;
 }
 
 .pagination-item-link {
@@ -1145,6 +1206,7 @@ img {
   display: flex;
   justify-content: space-between;
 
+  margin: 0 2.25%;
   padding-top: 18px;
   padding-bottom: 9px;
 }

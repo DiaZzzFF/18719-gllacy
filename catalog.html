@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="wrapper inner-page">
+    <div class="wrapper inner-page-wrapper">
 
     <!-- <<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
@@ -143,147 +143,153 @@
 
     <!-- <<<<<<<<<<<<<<< main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-      <main class="container">
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-item-link" href="index.html">Главная</a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-item-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="breadcrumbs-item breadcrumbs-current">Сливочное</li>
-        </ul>
+      <main class="inner-page-main">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-item-link" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-item-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-current">Сливочное</li>
+          </ul>
 
-        <h1 class="ice-cream-type">Сливочное мороженое</h1>
+          <h1 class="ice-cream-type">Сливочное мороженое</h1>
 
-        <section class="filters">
-          <h2 class="visually-hidden">Фильтры выбора мороженого</h2>
+          <section class="filters">
+            <h2 class="visually-hidden">Фильтры выбора мороженого</h2>
 
-          <div class="filters-box">
-            <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="filters-form-sorting filters-form-fieldset">
-                <legend class="filters-form-sorting-legend filters-form-heading">Сортировка:</legend>
+            <div class="filters-box">
+              <div class="filters-box-row-1">
+                <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+                  <fieldset class="filters-form-sorting filters-form-fieldset">
+                    <legend class="filters-form-sorting-legend filters-form-heading">Сортировка:</legend>
 
-                <select class="filters-form-sorting-select filters-form-text" name="sorting">
-                  <option class="filters-form-sorting-option filters-form-text" value="by popularity" selected>
-                    по популярности
-                  </option>
-                  <option class="filters-form-sorting-option filters-form-text" value="first inexpensive">
-                    сначала недорогие
-                  </option>
-                  <option class="filters-form-sorting-option filters-form-text" value="first expensive">
-                    сначала дорогие
-                  </option>
-                  <option class="filters-form-sorting-option filters-form-text" value="by fat content">
-                    по жирности
-                  </option>
-                </select>
-              </fieldset>
+                    <select class="filters-form-sorting-select filters-form-text" name="sorting">
+                      <option class="filters-form-sorting-option filters-form-text" value="by popularity" selected>
+                        по популярности
+                      </option>
+                      <option class="filters-form-sorting-option filters-form-text" value="first inexpensive">
+                        сначала недорогие
+                      </option>
+                      <option class="filters-form-sorting-option filters-form-text" value="first expensive">
+                        сначала дорогие
+                      </option>
+                      <option class="filters-form-sorting-option filters-form-text" value="by fat content">
+                        по жирности
+                      </option>
+                    </select>
+                  </fieldset>
 
-              <fieldset class="filters-form-price filters-form-fieldset">
-                <legend class="filters-form-price-legend filters-form-heading">Цена:</legend>
+                  <fieldset class="filters-form-price filters-form-fieldset">
+                    <legend class="filters-form-price-legend filters-form-heading">Цена:</legend>
 
-                <div class="filters-form-price">
-                  <label class="filters-form-price-text filters-form-heading">
-                    <input class="filters-form-price-min filters-form-text" type="text" name="price-min" value="100">
-                    руб. –
-                  </label>
+                    <div class="filters-form-price">
+                      <label class="filters-form-price-text filters-form-heading">
+                        <input class="filters-form-price-min filters-form-text" type="text" name="price-min" value="100">
+                        руб. –
+                      </label>
 
-                  <label class="filters-form-price-text filters-form-heading">
-                    <input class="filters-form-price-max filters-form-text" type="text" name="price-max" value="500">
-                    руб.
-                  </label>
+                      <label class="filters-form-price-text filters-form-heading">
+                        <input class="filters-form-price-max filters-form-text" type="text" name="price-max" value="500">
+                        руб.
+                      </label>
+                    </div>
+
+                    <div class="filters-form-price-range-box">
+                      <div class="filters-form-price-range"></div>
+                      <div class="filters-form-price-range-current"></div>
+
+                      <div class="filters-form-price-range-min"></div>
+                      <div class="filters-form-price-range-max"></div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="filters-form-fat-content filters-form-fieldset">
+                    <legend class="filters-form-fat-content-legend filters-form-heading">Жирность:</legend>
+
+                    <ul class="filters-form-fat-content-list filters-form-ul">
+                      <li class="filters-form-fat-content-item">
+                        <label class="filters-form-fat-content-item-label filters-form-text">
+                          <input class="filters-form-fat-content-item-pick" type="radio" value="0%" name="fat-content">
+                          0%
+                        </label>
+                      </li>
+
+                      <li class="filters-form-fat-content-item">
+                        <label class="filters-form-fat-content-item-label filters-form-text">
+                          <input class="filters-form-fat-content-item-pick" type="radio" value="up to 10%" name="fat-content" checked>
+                          до 10%
+                        </label>
+                      </li>
+
+                      <li class="filters-form-fat-content-item">
+                        <label class="filters-form-fat-content-item-label filters-form-text">
+                          <input class="filters-form-fat-content-item-pick" type="radio" value="up to 30%" name="fat-content">
+                          до 30%
+                        </label>
+                      </li>
+
+                      <li class="filters-form-fat-content-item">
+                        <label class="filters-form-fat-content-item-label filters-form-text">
+                          <input class="filters-form-fat-content-item-pick" type="radio" value="above 30%" name="fat-content">
+                          выше 30%
+                        </label>
+                      </li>
+
+                    </ul>
+                  </fieldset>
                 </div>
 
-                <div class="filters-form-price-range-box">
-                  <div class="filters-form-price-range"></div>
-                  <div class="filters-form-price-range-current"></div>
+                <div class="filters-box-row-2">
+                  <fieldset class="filters-form-fillers filters-form-fieldset">
+                    <legend class="filters-form-fillers-legend filters-form-heading">Наполнители:</legend>
 
-                  <div class="filters-form-price-range-min"></div>
-                  <div class="filters-form-price-range-max"></div>
+                    <ul class="filters-form-fillers-list filters-form-ul">
+                      <li class="filters-form-fillers-item">
+                        <label class="filters-form-fillers-item-label filters-form-text">
+                          <input class="filters-form-fillers-item-pick" type="checkbox" name="chocolate" checked>
+                          шоколадные
+                        </label>
+                      </li>
+
+                      <li class="filters-form-fillers-item">
+                        <label class="filters-form-fillers-item-label filters-form-text">
+                          <input class="filters-form-fillers-item-pick" type="checkbox" name="sugar-powders" checked>
+                          сахарные присыпки
+                        </label>
+                      </li>
+
+                      <li class="filters-form-fillers-item">
+                        <label class="filters-form-fillers-item-label filters-form-text">
+                          <input class="filters-form-fillers-item-pick" type="checkbox" name="fruit">
+                          фрукты
+                        </label>
+                      </li>
+
+                      <li class="filters-form-fillers-item">
+                        <label class="filters-form-fillers-item-label filters-form-text">
+                          <input class="filters-form-fillers-item-pick" type="checkbox" name="syrups">
+                          сиропы
+                        </label>
+                      </li>
+
+                      <li class="filters-form-fillers-item">
+                        <label class="filters-form-fillers-item-label filters-form-text">
+                          <input class="filters-form-fillers-item-pick" type="checkbox" name="jams">
+                          джемы
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+
+                  <button class="filters-form-btn" type="submit">Применить</button>
                 </div>
-              </fieldset>
-
-              <fieldset class="filters-form-fat-content filters-form-fieldset">
-                <legend class="filters-form-fat-content-legend filters-form-heading">Жирность:</legend>
-
-                <ul class="filters-form-fat-content-list filters-form-ul">
-                  <li class="filters-form-fat-content-item">
-                    <label class="filters-form-fat-content-item-label filters-form-text">
-                      <input class="filters-form-fat-content-item-pick" type="radio" value="0%" name="fat-content">
-                      0%
-                    </label>
-                  </li>
-
-                  <li class="filters-form-fat-content-item">
-                    <label class="filters-form-fat-content-item-label filters-form-text">
-                      <input class="filters-form-fat-content-item-pick" type="radio" value="up to 10%" name="fat-content" checked>
-                      до 10%
-                    </label>
-                  </li>
-
-                  <li class="filters-form-fat-content-item">
-                    <label class="filters-form-fat-content-item-label filters-form-text">
-                      <input class="filters-form-fat-content-item-pick" type="radio" value="up to 30%" name="fat-content">
-                      до 30%
-                    </label>
-                  </li>
-
-                  <li class="filters-form-fat-content-item">
-                    <label class="filters-form-fat-content-item-label filters-form-text">
-                      <input class="filters-form-fat-content-item-pick" type="radio" value="above 30%" name="fat-content">
-                      выше 30%
-                    </label>
-                  </li>
-
-                </ul>
-              </fieldset>
-
-              <fieldset class="filters-form-fillers filters-form-fieldset">
-                <legend class="filters-form-fillers-legend filters-form-heading">Наполнители:</legend>
-
-                <ul class="filters-form-fillers-list filters-form-ul">
-                  <li class="filters-form-fillers-item">
-                    <label class="filters-form-fillers-item-label filters-form-text">
-                      <input class="filters-form-fillers-item-pick" type="checkbox" name="chocolate" checked>
-                      шоколадные
-                    </label>
-                  </li>
-
-                  <li class="filters-form-fillers-item">
-                    <label class="filters-form-fillers-item-label filters-form-text">
-                      <input class="filters-form-fillers-item-pick" type="checkbox" name="sugar-powders" checked>
-                      сахарные присыпки
-                    </label>
-                  </li>
-
-                  <li class="filters-form-fillers-item">
-                    <label class="filters-form-fillers-item-label filters-form-text">
-                      <input class="filters-form-fillers-item-pick" type="checkbox" name="fruit">
-                      фрукты
-                    </label>
-                  </li>
-
-                  <li class="filters-form-fillers-item">
-                    <label class="filters-form-fillers-item-label filters-form-text">
-                      <input class="filters-form-fillers-item-pick" type="checkbox" name="syrups">
-                      сиропы
-                    </label>
-                  </li>
-
-                  <li class="filters-form-fillers-item">
-                    <label class="filters-form-fillers-item-label filters-form-text">
-                      <input class="filters-form-fillers-item-pick" type="checkbox" name="jams">
-                      джемы
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-
-              <button class="filters-form-btn" type="submit">Применить</button>
-            </form>
-          </div>
-        </section>
+              </form>
+            </div>
+          </section>
+        </div>
 
         <section class="ice-cream">
           <ul class="ice-cream-list">
@@ -398,29 +404,31 @@
           </ul>
         </section>
 
-        <section class="catalog-pagination">
-          <a class="catalog-pagination-prev" href="#" aria-label="Переход на страницу назад"></a>
+        <div class="container">
+          <section class="catalog-pagination">
+            <a class="catalog-pagination-prev" href="#" aria-label="Переход на страницу назад"></a>
 
-          <ul class="pagination-list">
-            <li class="pagination-item">
-              <a class="pagination-item-link pagination-item-link-current" aria-label="Переход на страницу 1">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-item-link" href="#" aria-label="Переход на страницу 2">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-item-link" href="#" aria-label="Переход на страницу 3">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-item-link" href="#" aria-label="Переход на страницу 4">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-item-link" href="#" aria-label="Переход на страницу 5">5</a>
-            </li>
-          </ul>
+            <ul class="pagination-list">
+              <li class="pagination-item">
+                <a class="pagination-item-link pagination-item-link-current" aria-label="Переход на страницу 1">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-item-link" href="#" aria-label="Переход на страницу 2">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-item-link" href="#" aria-label="Переход на страницу 3">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-item-link" href="#" aria-label="Переход на страницу 4">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-item-link" href="#" aria-label="Переход на страницу 5">5</a>
+              </li>
+            </ul>
 
-          <a class="catalog-pagination-next" href="#" aria-label="Переход на страницу вперёд"></a>
-        </section>
+            <a class="catalog-pagination-next" href="#" aria-label="Переход на страницу вперёд"></a>
+          </section>
+        </div>
       </main>
 
     <!-- <<<<<<<<<<<<<<< footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
