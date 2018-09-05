@@ -37,6 +37,7 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -267,7 +268,7 @@ img {
   font-weight: 400;
 }
 
-.header-submenu-item:first-of-type{
+.header-submenu-item-novelty{
   font-weight: 700;
 }
 
@@ -284,9 +285,11 @@ img {
   color: rgb(50, 50, 50);
 }
 
-.header-submenu-item:first-of-type .site-navigation-submenu-item-link {
+/*
+.header-submenu-item link-novelty {
   border-bottom: 1px solid rgba(53, 53, 53, 0.2);
 }
+*/
 
 .header-submenu-item-link:hover {
   color: rgb(50, 50, 50);
@@ -724,8 +727,7 @@ img {
   font-weight: 400;
 }
 
-.description-item:nth-of-type(3),
-.description-item:nth-of-type(4) {
+.description-item:not(:nth-of-type(1)):not(:nth-of-type(2)) {
   margin-top: 9px;
 }
 
@@ -756,7 +758,7 @@ img {
 .blog,
 .subscription {
   width: 48.88%;
-  height: 220px;
+  min-height: 220px;
 }
 
 /* ========== blog */
@@ -809,7 +811,7 @@ img {
 
 .subscription-box {
   padding: 29px 20px 35px;
-  max-height: 210px;
+  min-height: 210px;
 }
 
 .subscription-text {
@@ -881,24 +883,24 @@ img {
   margin: 0;
 }
 
-.feedback-text:nth-of-type(1) {
+.feedback-text-address-header {
   margin-top: 4px;
   width: 60%;
 }
 
-.feedback-text-bold:nth-of-type(2) {
+.feedback-text-address {
   margin-top: 1px;
 }
 
-.feedback-text:nth-of-type(3) {
+.feedback-text-tel-header {
   margin-top: 18px;
 }
 
-.feedback-text-bold:nth-of-type(4) {
+.feedback-text-tel {
   margin-top: 5px;
 }
 
-.feedback-text:nth-of-type(5) {
+.feedback-text-time {
   margin-top: 2px;
 }
 
@@ -1079,15 +1081,12 @@ img {
 
 /* =============== карточки с мороженкой */
 
-.catalog-hits,
 .ice-cream {
   max-width: 1172px;
   text-align: right;
 }
 
-.catalog-hits-list,
 .ice-cream-list {
-
   margin-top: 34px;
   margin-bottom: -43px;
 }
