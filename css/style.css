@@ -73,6 +73,7 @@ img {
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
+/*
 .wrapper::before,
 .wrapper::after {
   content: "";
@@ -89,6 +90,7 @@ img {
   background-color: rgb(157, 139, 132);
   background-image: url("../img/bg-sunburn-with-fondant-and-strawberry-sherbet.png");
 }
+*/
 
 .inner-page-wrapper {
   background-image: none;
@@ -1220,6 +1222,49 @@ img {
   width: 30%;
 }
 
+/* =============== social */
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 185px;
+  margin-top: 18px;
+  padding: 0;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid rgba(255, 255, 255, 0.502);
+  border-radius: 50%;
+}
+
+.social-btn path {
+  width: 32px;
+  height: 32px;
+
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.social-btn:hover,
+.social-btn:active {
+  border-color: rgba(255, 255, 255, 0.702);
+}
+
+.social-btn:hover path {
+  fill: rgb(255, 255, 255);
+}
+
+.social-btn:active path {
+  fill: rgb(233, 233, 233);
+}
+
 /* =============== menu */
 
 .footer-menu {
@@ -1258,6 +1303,20 @@ img {
   font-weight: 700;
 }
 
+.footer-menu-item-special::before {
+  content: "";
+
+  position: absolute;
+
+  width: 15px;
+  height: 13px;
+  margin-top: 7px;
+  margin-left: -22px;
+
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+}
+
 .footer-link:hover,
 .footer-link:active {
   color: rgb(255, 188, 158);
@@ -1274,15 +1333,20 @@ img {
 }
 
 .footer-copyright-logo-link {
-  margin-right: 88px;
+  margin-right: 81px;
 }
 
 .footer-copyright-text {
   margin: 0;
+  margin-top: 6.2px;
 
   font-size: 12px;
 
   border-bottom: none;
+}
+
+.footer-copyright-text-link {
+  font-size: 12px;
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
