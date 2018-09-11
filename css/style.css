@@ -141,7 +141,7 @@ img {
 
 /* Войти */
 .user-tools-navigation-form-submit {
-  padding: 10px 24.5px;
+  padding: 0 24.5px;
 }
 
 /* Давайте оба! */
@@ -206,19 +206,23 @@ img {
 .header-logo {
   margin-top: 9px;
 
-  max-height: 64px;
+  min-width: 154px;
+  min-height: 64px;
 }
 
 /* =============== menu */
 
 .header-navigation {
   display: flex;
-  width: 85%;
   justify-content: space-between;
   align-items: center;
+
+  width: 85.69%;
+  margin-top: 5px;
 }
 
 .header-menu {
+  display: flex;
   margin: 0;
   padding: 0;
 
@@ -227,11 +231,12 @@ img {
 }
 
 .header-menu-item {
-  display: inline-block;
-
   position: relative;
 
-  margin-right: 28px;
+  padding: 7px 13.5px 6px;
+  margin-right: 1.5px;
+
+  border-radius: 20px;
 }
 
 .header-menu-item-link {
@@ -242,16 +247,25 @@ img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.header-menu-item-link:hover {
+.header-menu-item-link::after {
+  content: "";
+
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 100%;
+  min-height: 10px;
+}
+
+.header-menu-item:hover,
+.header-menu-item:hover .header-menu-item-link {
   color: rgb(50, 50, 50);
 
   background-color: rgb(247, 246, 243);
   border-bottom: none;
-}
 
-.header-menu-item-link:active {
-  background-color: rgba(248, 247, 244, 0.988);
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  cursor: pointer;
 }
 
 /* =============== submenu */
@@ -261,8 +275,9 @@ img {
   position: absolute;
 
   width: 143px;
-
   margin: 0;
+  margin-top: 12px;
+  margin-left: -19.5px;
   padding: 0;
 
   font-size: 14px;
@@ -274,6 +289,20 @@ img {
   font-weight: 700;
 }
 
+.header-submenu-item-novelty::after {
+  content: "";
+
+  position: absolute;
+  top: 33px;
+
+  display: block;
+  width: 128px;
+  height: 1px;
+  margin-left: 6px;
+
+  background-color: rgb(209, 208, 206);
+}
+
 .header-submenu-item {
   background-color: rgb(248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -283,24 +312,15 @@ img {
   display: block;
 
   margin-bottom: -1px;
+  padding: 9.6px 20px;
 
   color: rgb(50, 50, 50);
 }
-
-/*
-.header-submenu-item link-novelty {
-  border-bottom: 1px solid rgba(53, 53, 53, 0.2);
-}
-*/
 
 .header-submenu-item-link:hover {
   color: rgb(50, 50, 50);
 
   background-color: rgb(251, 222, 216);
-}
-
-.header-submenu-item-link:active {
-  background-color: rgb(246, 181, 165);
 }
 
 /* ========== menu + submenu */
@@ -310,38 +330,35 @@ img {
   list-style: none;
 }
 
-.header-menu-focus {
+.header-menu-item:hover .header-submenu {
+  display: block;
+}
+
+/* ===== menu + submenu (current) */
+
+.menu-current {
+  background-color: rgb(208, 112, 88);
+}
+
+.menu-link-current {
   color: rgb(255, 255, 255);
 
   background-color: rgb(208, 112, 88);
   border-bottom: none;
 }
 
-.header-menu-item:hover .header-submenu {
-  display: block;
+/* ===== menu + submenu (active) */
+
+.header-menu-item:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
 
-/* ========== user-tools (спрятать/показать)  */
-
-.user-tools-search-form,
-.user-tools-navigation-box,
-.shopping-box {
-  display: none;
-  position: absolute;
+.header-submenu-item-link:active {
+  background-color: rgb(246, 181, 165);
 }
 
-/* потом
-
-.user-tools-search:hover .user-tools-search-form,
-.user-tools-navigation-btn:hover .user-tools-navigation-box,
-.user-tools-shopping-btn-full:hover .shopping-box {
-  display: block;
-}
-
-*/
-
-
-/* ========== user-tools + subscription + feedback-modal = /форма/ */
+/* =============== user-tools */
 
 .user-tools {
   display: flex;
@@ -353,51 +370,380 @@ img {
   margin-left: 10px;
 }
 
-/* ===== кнопки */
+/* ===== active */
 
-.user-tools-search{
-  position: relative;
-  width: 33px;
-  height: 33px;
+.user-tools-search-btn:active,
+.user-tools-navigation-btn:active,
+.user-tools-shopping-btn:active,
+.user-tools-shopping-btn-full:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
 
-.user-tools-search,
-.user-tools-navigation-btn,
-.user-tools-shopping-btn {
+/* ===== user-tools (спрятать/показать)  */
+
+.user-tools-search-form,
+.user-tools-navigation-form,
+.shopping-box {
+  position: absolute;
+  z-index: 100;
+
+  display: none;
+}
+
+.user-tools-search:hover .user-tools-search-form,
+.user-tools-navigation:hover .user-tools-navigation-form,
+.user-tools-shopping:hover .shopping-box {
+  display: block;
+}
+
+/* ========== search */
+
+.user-tools-search {
+  position: relative;
+}
+
+.user-tools-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-style: none;
+  border-radius: 50%;
+}
+
+.user-tools-search-btn::after {
+  content: "";
+
+  position: absolute;
+  top: 30px;
+
+  width: 100%;
+  min-height: 10px;
+}
+
+.user-tools-search-btn:hover {
+  background-color: rgb(248, 247, 244);
+}
+
+.user-tools-search-btn:hover path{
+  fill: rgb(50, 50, 50);
+}
+
+.user-tools-search-form {
+  top: 36px;
+  left: -308px;
+
+  min-width: 341px;
+  padding: 20px 15px;
+
+  background-color: rgb(248, 247, 244);
+  border-radius: 6px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.user-tools-search-form-field {
+  width: 100%;
+}
+
+/* ========== navigation */
+
+.user-tools-navigation {
+  position: relative;
+}
+
+.user-tools-navigation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6.5px 16px;
+
   font-size: 14px;
   line-height: 16px;
   color: rgb(255, 255, 255);
 
   background-color: rgba(255, 255, 255, 0.2);
   border-style: none;
+  border-radius: 20px;
 }
 
-.user-tools-search-form-btn:hover,
-.user-tools-navigation-btn:hover,
+.user-tools-navigation-btn:hover {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(255, 255, 255);
+}
+
+.user-tools-navigation-btn-svg {
+  margin-right: 8px;
+}
+
+.user-tools-navigation-btn path {
+  fill: rgb(255, 255, 255);
+}
+
+.user-tools-navigation-btn:hover path {
+  fill: rgb(50, 50, 50);
+}
+
+.user-tools-navigation-btn::after {
+  content: "";
+
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 100%;
+  min-height: 10px;
+}
+
+.user-tools-navigation-form {
+  top: 36px;
+  left: -180px;
+
+  width: 277px;
+  padding: 20px 17px 21px 19px;
+
+  background-color: rgb(248, 247, 244);
+  border-radius: 6px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.user-tools-navigation-form-box {
+  margin-bottom: 20px;
+}
+
+.user-tools-navigation-form-row {
+  display: flex;
+}
+
+.user-tools-navigation-form-other {
+  margin-left: 19px;
+  height: 45px;
+}
+
+/* ===== ссылки */
+
+.user-tools-navigation-form-other-recovery,
+.user-tools-navigation-form-other-registration {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+
+  border-bottom: 1px solid rgb(173, 172, 170);
+}
+
+.user-tools-navigation-form-other-recovery:hover,
+.user-tools-navigation-form-other-registration:hover,
+.user-tools-navigation-form-other-recovery:active,
+.user-tools-navigation-form-other-registration:active {
+  color: rgb(232, 77, 55);
+
+  border-bottom-color: rgb(249, 205, 196);
+}
+
+/* ========== shopping */
+
+.user-tools-shopping {
+  position: relative;
+}
+
+.user-tools-shopping-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6px 16.5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(255, 255, 255);
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-style: none;
+  border-radius: 20px;
+}
+
 .user-tools-shopping-btn:hover {
   color: rgb(50, 50, 50);
 
   background-color: rgb(255, 255, 255);
 }
 
+.user-tools-shopping-btn-svg {
+  margin-right: 8px;
+
+}
+
+.user-tools-shopping-btn:hover g {
+  fill: rgb(50, 50, 50);
+}
+
+/* ===== shopping-btn (catalog.html) */
+
 .user-tools-shopping-btn-full {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 16.5px;
+  padding-left: 44px;
+
   font-size: 14px;
   line-height: 16px;
   color: rgb(50, 50, 50);
 
   background-color: rgb(248, 247, 244);
+  background-image: url("../img/basket-red.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 50%;
   border-style: none;
+  border-radius: 20px;
   opacity: 0.988;
 }
 
-/* ===== bg-form */
+.user-tools-shopping-btn-full::after {
+  content: "";
 
-.user-tools-search-form,
-.user-tools-navigation-form {
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 100%;
+  min-height: 10px;
+}
+
+/* ===== таблица */
+
+.shopping-box {
+  top: 36px;
+  left: -422px;
+
+  min-width: 540px;
+  min-height: 242px;
+
+  color: rgb(50, 50, 50);
+
   background-color: rgb(248, 247, 244);
-  border-radius: 6px;
+  border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
+
+.shopping-list {
+  margin: 0;
+  padding: 15px;
+
+  list-style: none;
+}
+
+.shopping-list::after {
+  content: "";
+
+  position: absolute;
+  top: 131px;
+  left: 15px;
+
+  display: block;
+  width: 510px;
+  height: 1px;
+
+  background-color: rgb(202, 202, 199);
+}
+
+.shopping-item {
+  display: flex;
+}
+
+.shopping-item:not(:first-of-type) {
+  margin-top: 9px;
+}
+
+.shopping-item-delete {
+  align-self: center;
+
+  width: 4.1%;
+}
+
+.shopping-item-delete-btn {
+  width: 11px;
+  height: 11px;
+
+  background: none;
+  border: none;
+  background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.shopping-item-img {
+  align-self: center;
+
+  min-width: 33px;
+  min-height: 33px;
+  margin-right: 14px;
+}
+
+.shopping-item-img-1 {
+  background-image: url("../img/bg-mini-creamy-with-orange-jam-and-citrus-shavings.png");
+}
+
+.shopping-item-img-2 {
+  background-image: url("../img/bg-mini-creamy-strawberry-with-powder-of-white-chocolate.png");
+}
+
+.shopping-item-text {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+}
+
+.shopping-item-heading-big {
+  margin: 0;
+  padding-top: 14px;
+}
+
+.shopping-item-heading {
+  width: 42.5%;
+  margin-right: 31px;
+}
+
+.shopping-item-weight {
+  margin-right: 3px;
+}
+
+.shopping-item-multy {
+  margin-right: 4px;
+}
+
+.shopping-item-price {
+  margin-right: 29px;
+
+  color: rgb(153, 153, 153);
+}
+
+.shopping-total-price {
+  margin-right: 14px;
+
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.shopping-btn {
+ float: right;
+ margin-right: 14px;
+}
+
+/* ========== user-tools + subscription + feedback-modal = /форма/ */
+
+/* ===== bg-form */
 
 .subscription-box,
 .feedback-modal {
@@ -408,13 +754,16 @@ img {
 /* ===== поля */
 
 .form-text {
+  width: 100%;
+  padding: 9px 15px;
+
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
   color: rgb(50, 50, 50);
 
   background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(178, 178, 178);
+  border: 1px solid rgb(211, 211, 210);
   border-radius: 5px;
 }
 
@@ -449,78 +798,11 @@ img {
 }
 
 .form-text:hover {
-  border-width: 2px;
-  border-color: rgb(154, 154, 154);
+  box-shadow: inset 0 0 0 1px rgba(154, 154, 154, 0.52);
 }
 
 .form-text:focus {
-  border-width: 2px;
-  border-color: rgb(46, 136, 228);
-}
-
-/* ===== ссылки */
-
-.user-tools-navigation-form-other-recovery,
-.user-tools-navigation-form-other-registration {
-  font-size: 13px;
-  line-height: 24px;
-  font-weight: 400;
-  color: rgb(50, 50, 50);
-
-  border-bottom: 1px solid rgb(173, 172, 170);
-}
-
-.user-tools-navigation-form-other-recovery:hover,
-.user-tools-navigation-form-other-registration:hover,
-.user-tools-navigation-form-other-recovery:active,
-.user-tools-navigation-form-other-registration:active {
-  color: rgb(232, 77, 55);
-
-  border-bottom-color: rgb(249, 205, 196);
-}
-
-/* =============== таблица */
-
-.shopping-box {
-  color: rgb(50, 50, 50);
-
-  background-color: rgb(248, 247, 244);
-  border-radius: 5px;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-}
-
-.shopping-table {
-  border-bottom: 1px solid rgb(202, 202, 199);
-}
-
-.table-item-img-box{
-  width: 33px;
-  height: 33px;
-}
-
-.table-item-img-1 {
-  background-image: url("../img/bg-mini-creamy-with-orange-jam-and-citrus-shavings.png");
-}
-
-.table-item-img-2 {
-  background-image: url("../img/bg-mini-creamy-strawberry-with-powder-of-white-chocolate.png");
-}
-
-.table-item-text {
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 400;
-  color: rgb(50, 50, 50);
-}
-
-.table-item-price {
-  color: rgb(153, 153, 153);
-}
-
-.shopping-total-price {
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
 }
 
 /* =============== contacts */
