@@ -175,40 +175,43 @@
             <h2 class="visually-hidden">Фильтры выбора мороженого</h2>
 
             <div class="filters-box">
-              <div class="filters-box-row-1">
-                <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+              <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+                <div class="filters-form-row-1">
                   <fieldset class="filters-form-sorting filters-form-fieldset">
                     <legend class="filters-form-sorting-legend filters-form-heading">Сортировка:</legend>
 
                     <select class="filters-form-sorting-select filters-form-text" name="sorting">
                       <option class="filters-form-sorting-option filters-form-text" value="by popularity" selected>
-                        по популярности
+                          по популярности
                       </option>
                       <option class="filters-form-sorting-option filters-form-text" value="first inexpensive">
-                        сначала недорогие
+                          сначала недорогие
                       </option>
                       <option class="filters-form-sorting-option filters-form-text" value="first expensive">
-                        сначала дорогие
+                          сначала дорогие
                       </option>
                       <option class="filters-form-sorting-option filters-form-text" value="by fat content">
-                        по жирности
+                          по жирности
                       </option>
                     </select>
+
                   </fieldset>
 
                   <fieldset class="filters-form-price filters-form-fieldset">
-                    <legend class="filters-form-price-legend filters-form-heading">Цена:</legend>
+                    <div class="filters-form-price-box-1">
+                      <legend class="filters-form-price-legend filters-form-heading">Цена:</legend>
 
-                    <div class="filters-form-price">
-                      <label class="filters-form-price-text filters-form-heading">
-                        <input class="filters-form-price-min filters-form-text" type="text" name="price-min" value="100">
-                        руб. –
-                      </label>
+                      <div class="filters-form-price-box-2">
+                        <label class="filters-form-price-text filters-form-heading">
+                          <input class="filters-form-price-min filters-form-text" type="text" name="price-min" value="100">
+                            руб. –
+                        </label>
 
-                      <label class="filters-form-price-text filters-form-heading">
-                        <input class="filters-form-price-max filters-form-text" type="text" name="price-max" value="500">
-                        руб.
-                      </label>
+                        <label class="filters-form-price-text filters-form-heading">
+                          <input class="filters-form-price-max filters-form-text" type="text" name="price-max" value="500">
+                            руб.
+                          </label>
+                      </div>
                     </div>
 
                     <div class="filters-form-price-range-box">
@@ -223,77 +226,58 @@
                   <fieldset class="filters-form-fat-content filters-form-fieldset">
                     <legend class="filters-form-fat-content-legend filters-form-heading">Жирность:</legend>
 
-                    <ul class="filters-form-fat-content-list filters-form-ul">
+                    <ul class="filters-form-fat-content-list">
                       <li class="filters-form-fat-content-item">
-                        <label class="filters-form-fat-content-item-label filters-form-text">
-                          <input class="filters-form-fat-content-item-pick" type="radio" value="0%" name="fat-content">
-                          0%
-                        </label>
+                        <input class="visually-hidden filters-form-fat-content-item-pick" type="radio" value="0%" name="fat-content" id="fat-content-0">
+                        <label class="filters-form-fat-content-item-label filters-form-text" for="fat-content-0">0%</label>
                       </li>
 
                       <li class="filters-form-fat-content-item">
-                        <label class="filters-form-fat-content-item-label filters-form-text">
-                          <input class="filters-form-fat-content-item-pick" type="radio" value="up to 10%" name="fat-content" checked>
-                          до 10%
-                        </label>
+                        <input class="visually-hidden filters-form-fat-content-item-pick" type="radio" value="up to 10%" name="fat-content" id="fat-content-up10" checked>
+                        <label class="filters-form-fat-content-item-label filters-form-text" for="fat-content-up10">до 10%</label>
                       </li>
 
                       <li class="filters-form-fat-content-item">
-                        <label class="filters-form-fat-content-item-label filters-form-text">
-                          <input class="filters-form-fat-content-item-pick" type="radio" value="up to 30%" name="fat-content">
-                          до 30%
-                        </label>
+                        <input class="visually-hidden filters-form-fat-content-item-pick" type="radio" value="up to 30%" name="fat-content" id="fat-content-up30">
+                        <label class="filters-form-fat-content-item-label filters-form-text" for="fat-content-up30">до 30%</label>
                       </li>
 
                       <li class="filters-form-fat-content-item">
-                        <label class="filters-form-fat-content-item-label filters-form-text">
-                          <input class="filters-form-fat-content-item-pick" type="radio" value="above 30%" name="fat-content">
-                          выше 30%
-                        </label>
+                        <input class="visually-hidden filters-form-fat-content-item-pick" type="radio" value="above 30%" name="fat-content" id="fat-content-above30">
+                        <label class="filters-form-fat-content-item-label filters-form-text" for="fat-content-above30">выше 30%</label>
                       </li>
-
                     </ul>
                   </fieldset>
                 </div>
 
-                <div class="filters-box-row-2">
+                <div class="filters-form-row-2">
                   <fieldset class="filters-form-fillers filters-form-fieldset">
                     <legend class="filters-form-fillers-legend filters-form-heading">Наполнители:</legend>
 
-                    <ul class="filters-form-fillers-list filters-form-ul">
+                    <ul class="filters-form-fillers-list">
                       <li class="filters-form-fillers-item">
-                        <label class="filters-form-fillers-item-label filters-form-text">
-                          <input class="filters-form-fillers-item-pick" type="checkbox" name="chocolate" checked>
-                          шоколадные
-                        </label>
+                        <input class="visually-hidden filters-form-fillers-item-pick" type="checkbox" name="chocolate" id="filter-chocolate" checked>
+                        <label class="filters-form-fillers-item-label filters-form-text" for="filter-chocolate">шоколадные</label>
                       </li>
 
                       <li class="filters-form-fillers-item">
-                        <label class="filters-form-fillers-item-label filters-form-text">
-                          <input class="filters-form-fillers-item-pick" type="checkbox" name="sugar-powders" checked>
-                          сахарные присыпки
-                        </label>
+                        <input class="visually-hidden filters-form-fillers-item-pick" type="checkbox" name="sugar-powders" id="filter-sugar-powders" checked>
+                        <label class="filters-form-fillers-item-label filters-form-text" for="filter-sugar-powders">сахарные присыпки</label>
                       </li>
 
                       <li class="filters-form-fillers-item">
-                        <label class="filters-form-fillers-item-label filters-form-text">
-                          <input class="filters-form-fillers-item-pick" type="checkbox" name="fruit">
-                          фрукты
-                        </label>
+                        <input class="visually-hidden filters-form-fillers-item-pick" type="checkbox" name="fruit" id="filter-fruit">
+                        <label class="filters-form-fillers-item-label filters-form-text" for="filter-fruit">фрукты</label>
                       </li>
 
                       <li class="filters-form-fillers-item">
-                        <label class="filters-form-fillers-item-label filters-form-text">
-                          <input class="filters-form-fillers-item-pick" type="checkbox" name="syrups">
-                          сиропы
-                        </label>
+                        <input class="visually-hidden filters-form-fillers-item-pick" type="checkbox" name="syrups" id="filter-syrups">
+                        <label class="filters-form-fillers-item-label filters-form-text" for="filter-syrups">сиропы</label>
                       </li>
 
                       <li class="filters-form-fillers-item">
-                        <label class="filters-form-fillers-item-label filters-form-text">
-                          <input class="filters-form-fillers-item-pick" type="checkbox" name="jams">
-                          джемы
-                        </label>
+                        <input class="visually-hidden filters-form-fillers-item-pick" type="checkbox" name="jams" id="filter-jams">
+                        <label class="filters-form-fillers-item-label filters-form-text" for="filter-jams">джемы</label>
                       </li>
                     </ul>
                   </fieldset>
