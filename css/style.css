@@ -6,10 +6,6 @@ html {
   box-sizing: border-box;
 }
 
-.content-box-component {
-  box-sizing: content-box;
-}
-
 body {
   /* Позиционирование */
 
@@ -21,7 +17,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: rgb(255, 255, 255);
 
   /* Оформление */
@@ -60,13 +56,10 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-/* =============== wrapper */
+/* =============== bg-slider */
 
-.wrapper {
-  max-width: 1200px;
+.bg-slider {
   min-width: 900px;
-
-  margin: 0 auto;
 
   background-image: url("../img/bg-creme-brulee-and-sebum-with-raspberry-jam.png");
   background-repeat: no-repeat;
@@ -75,24 +68,31 @@ input[type="radio"].visually-hidden {
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-/*
-.wrapper::before,
-.wrapper::after {
+.bg-slider::before,
+.bg-slider::after {
   content: "";
 
   visibility: hidden;
 }
 
-.wrapper::before {
+.bg-slider::before {
   background-color: rgb(137, 150, 166);
   background-image: url("../img/bg-chocolate-plombir-and-lemon-sorbet.png");
 }
 
-.wrapper::after {
+.bg-slider::after {
   background-color: rgb(157, 139, 132);
   background-image: url("../img/bg-sunburn-with-fondant-and-strawberry-sherbet.png");
 }
-*/
+
+/* =============== wrapper */
+
+.wrapper {
+  max-width: 1200px;
+  min-width: 900px;
+
+  margin: 0 auto;
+}
 
 .inner-page-wrapper {
   background-image: none;
@@ -110,33 +110,21 @@ input[type="radio"].visually-hidden {
   text-align: center;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
-  /* background-image: linear-gradient(0deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%); */
-  background: #f26843;
-  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 50px;
-  /* box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54); */
+  background-color: rgb(242, 104, 67);
+  background-image: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 50px;
   border: none;
 
   cursor: pointer;
 }
 
 .orange-btn:hover {
-  /*color: rgb(254, 254, 254);
-
-  background-image: linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);*/
-
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .orange-btn:active {
-  /*color: rgb(252, 238, 236);
-
-  background-image: linear-gradient(0deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);*/
-
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -619,7 +607,7 @@ input[type="radio"].visually-hidden {
   min-height: 10px;
 }
 
-/* ===== таблица */
+/* ===== shopping-box (catalog.html) */
 
 .shopping-box {
   top: 36px;
@@ -844,11 +832,15 @@ input[type="radio"].visually-hidden {
 /* =============== slider */
 
 .slider {
+  position: relative;
+
+  width: 100%;
+  margin-top: 275px;
   margin-bottom: 42px;
 }
 
 .slider-list {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -856,60 +848,87 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-.slider-pagination {
-  position: absolute;
-  margin-top: -40px;
-}
-
-.slider-pagination-item {
-  width: 21px;
-  height: 21px;
-
-  margin-right: 5px;
-
-  border-radius: 50%;
-}
-
-/* ===== слайды */
-
 .slider-item {
+  display: none;
+
   text-align: center;
 }
 
-.slider-item:nth-of-type(2) {
-  display: none;
-
-  background-color: rgb(137, 150, 166);
-  background-image: url("../img/bg-chocolate-plombir-and-lemon-sorbet.png");
-  background-repeat: no-repeat;
-}
-
-.slider-item:nth-of-type(3) {
-  display: none;
-
-  background-color: rgb(157, 139, 132);
-  background-image: url("../img/bg-sunburn-with-fondant-and-strawberry-sherbet.png");
-  background-repeat: no-repeat;
-}
-
-/* ===== текст */
-
 .slide-title {
-  width: 687px;
+  width: 688px;
   margin: 0 auto;
-  margin-top: 275px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
 }
 
-/* ===== кнопка */
+.slide-title-smaller {
+  width: 648px;
+}
 
 .slide-btn {
   font-size: 32px;
   line-height: 44px;
+}
+
+/* ===== controls */
+
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  z-index: 20;
+
+  margin-bottom: -43px;
+
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.slide-switch-1:checked ~ .bg-slider {
+  background-color: rgb(132, 157, 143);
+  background-image: url("../img/bg-creme-brulee-and-sebum-with-raspberry-jam.png");
+}
+
+.slide-switch-2:checked ~ .bg-slider {
+  background-color: rgb(137, 150, 166);
+  background-image: url("../img/bg-chocolate-plombir-and-lemon-sorbet.png");
+}
+
+.slide-switch-3:checked ~ .bg-slider {
+  background-color: rgb(157, 139, 132);
+  background-image: url("../img/bg-sunburn-with-fondant-and-strawberry-sherbet.png");
+}
+
+.slide-switch-1:checked ~ .bg-slider .slide-1,
+.slide-switch-2:checked ~ .bg-slider .slide-2,
+.slide-switch-3:checked ~ .bg-slider .slide-3 {
+  display: block;
+}
+
+.slide-switch-1:checked ~ .bg-slider label[for="product-1"],
+.slide-switch-2:checked ~ .bg-slider label[for="product-2"],
+.slide-switch-3:checked ~ .bg-slider label[for="product-3"] {
+  background-color: rgb(255, 255, 255);
+}
+
+.slide-switch-1:hover ~ .bg-slider label[for="product-1"],
+.slide-switch-2:hover ~ .bg-slider label[for="product-2"],
+.slide-switch-3:hover ~ .bg-slider label[for="product-3"] {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 /* =============== banners */
@@ -926,7 +945,6 @@ input[type="radio"].visually-hidden {
 .banner-chocolate {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   width: 48.88%;
   min-height: 229px;
@@ -943,11 +961,13 @@ input[type="radio"].visually-hidden {
 .banner-raspberry {
   background-color: rgb(112, 22, 42);
   background-image: url("../img/bg-raspberry.jpg");
+  background-size: cover;
 }
 
 .banner-chocolate {
   background-color: rgb(68, 42, 30);
   background-image: url("../img/bg-chocolate.jpg");
+  background-size: cover;
 }
 
 /* ===== text */
@@ -964,18 +984,21 @@ input[type="radio"].visually-hidden {
 }
 
 .banners-text {
+  margin: 0;
+  padding-top: 15px;
+
   font-size: 18px;
 }
 
 .banner-raspberry-btn,
 .banner-chocolate-btn {
   align-self: flex-end;
+  margin-top: 44px;
 }
 
 /* =============== description */
 
 .description {
-  max-height: 306px;
   margin-bottom: 40px;
   padding: 0 20px;
   padding-top: 25px;
@@ -1023,7 +1046,23 @@ input[type="radio"].visually-hidden {
   width: 49px;
   height: 49px;
 
-  background-color: black;
+  background-repeat: no-repeat;
+}
+
+.description-item-icon-ice {
+  background-image: url("../img/ice-cream.svg");
+}
+
+.description-item-icon-cow {
+  background-image: url("../img/cow.svg");
+}
+
+.description-item-icon-eco {
+  background-image: url("../img/eco.svg");
+}
+
+.description-item-icon-thermometer {
+  background-image: url("../img/thermometer.svg");
 }
 
 .description-item-text {
@@ -1046,6 +1085,10 @@ input[type="radio"].visually-hidden {
 .subscription {
   width: 48.88%;
   min-height: 220px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
 }
 
 /* ========== blog */
@@ -1055,8 +1098,7 @@ input[type="radio"].visually-hidden {
 
   background-color: rgb(255, 255, 255);
   background-image: url("../img/bg-strawberry.jpg");
-  background-repeat: no-repeat;
-  border-radius: 15px;
+  background-position: right center;
 }
 
 .blog-text {
@@ -1092,8 +1134,6 @@ input[type="radio"].visually-hidden {
   padding: 5px 6px;
 
   background-image: url("../img/bg-post.svg");
-  background-repeat: no-repeat;
-  border-radius: 15px;
 }
 
 .subscription-box {
