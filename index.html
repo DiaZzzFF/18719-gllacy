@@ -415,32 +415,34 @@
 
       <!-- <<<<<<<<<<<<<<< modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-        <section class="modal modal-map feedback-modal">
-          <h2 class="feedback-modal-heading">Мы обязательно вам ответим!</h2>
+        <div class="modal-overlay">
+          <section class="modal-map feedback-modal">
+            <h2 class="feedback-modal-heading">Мы обязательно вам ответим!</h2>
 
-          <button class="feedback-modal-close" aria-label="Закрыть окно"></button>
+            <button class="feedback-modal-close" aria-label="Закрыть окно"></button>
 
-          <div class="feedback-modal-box">
-            <form class="feedback-modal-form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="feedback-modal-form-box">
-                <label class="visually-hidden" for="user-feedback-name">Ваше имя</label>
-                <input class="form-text feedback-modal-form-text" type="text" name="name" id="user-feedback-name" placeholder="Как вас зовут?">
-              </div>
+            <div class="feedback-modal-box">
+              <form class="feedback-modal-form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="feedback-modal-form-box">
+                  <label class="visually-hidden" for="user-feedback-name">Ваше имя</label>
+                  <input class="form-text feedback-modal-form-text" type="text" name="name" id="user-feedback-name" placeholder="Как вас зовут?">
+                </div>
 
-              <div class="feedback-modal-form-box">
-                <label class="visually-hidden" for="user-feedback-email">Ваша почта</label>
-                <input class="form-text feedback-modal-form-text" type="email" name="email" id="user-feedback-email" placeholder="Ваша почта для ответа?">
-              </div>
+                <div class="feedback-modal-form-box">
+                  <label class="visually-hidden" for="user-feedback-email">Ваша почта</label>
+                  <input class="form-text feedback-modal-form-text" type="email" name="email" id="user-feedback-email" placeholder="Ваша почта для ответа?">
+                </div>
 
-              <div class="feedback-modal-form-box">
-                <label class="visually-hidden" for="user-feedback-review"></label>
-                <textarea class="form-text feedback-modal-form-text" name="review" id="user-feedback-review" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
-              </div>
+                <div class="feedback-modal-form-box">
+                  <label class="visually-hidden" for="user-feedback-review"></label>
+                  <textarea class="form-text feedback-modal-form-text feedback-modal-form-review" name="review" id="user-feedback-review" placeholder="Напишите что-нибудь..."></textarea>
+                </div>
 
-              <button class="orange-btn feedback-modal-form-btn" type="submit">Отправить</button>
-            </form>
-          </div>
-        </section>
+                <button class="orange-btn feedback-modal-form-btn" type="submit">Отправить</button>
+              </form>
+            </div>
+          </section>
+        </div>
 
       </div>
     </div>

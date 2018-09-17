@@ -1963,14 +1963,72 @@ input[type="radio"].visually-hidden {
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-.modal {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 555;
+
   display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.feedback-modal {
+  position: fixed;
+  top: 338px;
+  left: 50%;
+
+  width: 477px;
+  margin-left: -237px;
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 25px;
+  padding-bottom: 28px;
+}
+
+.feedback-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+
+  width: 18px;
+  height: 17px;
+
+  background-color: transparent;
+  background-image: url("../img/cross-big.svg");
+  background-repeat: no-repeat;
+  border: 0;
+
+  cursor: pointer;
 }
 
 .feedback-modal-heading {
+  margin: 0;
+  margin-bottom: 19px;
+
   font-size: 24px;
   line-height: 28px;
   color: rgb(50, 50, 50);
+}
+
+.feedback-modal-form-box:not(:last-of-type) {
+  margin-bottom: 20px;
+
+  width: 267px;
+}
+
+.feedback-modal-form-review {
+  min-height: 155px;
+  margin-bottom: 19px;
+}
+
+.feedback-modal-form-btn {
+  float: right;
 }
 
 
