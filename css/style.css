@@ -756,6 +756,8 @@ input[type="radio"].visually-hidden {
   min-width: 33px;
   min-height: 33px;
   margin-right: 14px;
+
+  border-radius: 50%;
 }
 
 .shopping-item-img-1 {
