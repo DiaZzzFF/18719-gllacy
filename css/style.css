@@ -1879,8 +1879,10 @@ input[type="radio"].visually-hidden {
 }
 
 .ice-cream-item-fast-btn {
-  width: 75%;
-  margin: 0 auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+
+  max-width: 202px;
   margin-top: -29px;
 
   visibility: hidden;
@@ -2220,7 +2222,7 @@ input[type="radio"].visually-hidden {
 
 .feedback-modal {
   position: fixed;
-  top: 338px;
+  top: 25%;
   left: 50%;
 
   width: 477px;
