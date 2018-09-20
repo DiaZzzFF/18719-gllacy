@@ -64,6 +64,7 @@ input[type="radio"].visually-hidden {
 .bg-slider {
   min-width: 900px;
 
+  background-color: rgb(132, 157, 143);
   background-image: url("../img/bg-creme-brulee-and-sebum-with-raspberry-jam.png");
   background-repeat: no-repeat;
   background-position: top center;
@@ -758,10 +759,12 @@ input[type="radio"].visually-hidden {
 }
 
 .shopping-item-img-1 {
+  background-color: rgb(235, 169, 99);
   background-image: url("../img/bg-mini-creamy-with-orange-jam-and-citrus-shavings.png");
 }
 
 .shopping-item-img-2 {
+  background-color: rgb(245, 138, 170);
   background-image: url("../img/bg-mini-creamy-strawberry-with-powder-of-white-chocolate.png");
 }
 
@@ -1235,6 +1238,7 @@ input[type="radio"].visually-hidden {
 .subscription {
   padding: 5px 6px;
 
+  background-color: rgb(226, 211, 218);
   background-image: url("../img/bg-post.svg");
 }
 
@@ -1280,7 +1284,12 @@ input[type="radio"].visually-hidden {
 
   min-height: 430px;
 
+  background-color: rgb(235, 226, 188);
   background-image: url("../img/map-and-pin.jpg");
+}
+
+.map {
+  border: none;
 }
 
 .feedback-box {
@@ -2153,29 +2162,58 @@ input[type="radio"].visually-hidden {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
+@-webkit-keyframes bounce {
+  0%   { -webkit-transform: translateY(-2555px);
+                 transform: translateY(-2555px); }
+  70%  { -webkit-transform: translateY(25px);
+                 transform: translateY(25px);    }
+  90%  { -webkit-transform: translateY(-25px);
+                 transform: translateY(-25px);   }
+  100% { -webkit-transform: translateY(0);
+                 transform: translateY(0);       }
+}
 @keyframes bounce {
-  0%   { transform: translateY(-2555px); }
-  70%  { transform: translateY(25px);    }
-  90%  { transform: translateY(-25px);   }
-  100% { transform: translateY(0);       }
+  0%   { -webkit-transform: translateY(-2555px);
+                 transform: translateY(-2555px); }
+  70%  { -webkit-transform: translateY(25px);
+                 transform: translateY(25px);    }
+  90%  { -webkit-transform: translateY(-25px);
+                 transform: translateY(-25px);   }
+  100% { -webkit-transform: translateY(0);
+                 transform: translateY(0);       }
 }
 
 .modal-show {
   display: block;
 
-  animation-name: bounce;
-  animation-duration: 0.5s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
+@-webkit-keyframes shake {
+  0%, 100%                { -webkit-transform: translateX(0);
+                                    transform: translateX(0);     }
+  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px);
+                                    transform: translateX(-10px); }
+  20%, 40%, 60%, 80%      { -webkit-transform: translateX(10px);
+                                    transform: translateX(10px);  }
+}
 @keyframes shake {
-  0%, 100%                { transform: translateX(0);     }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-  20%, 40%, 60%, 80%      { transform: translateX(10px);  }
+  0%, 100%                { -webkit-transform: translateX(0);
+                                    transform: translateX(0);     }
+  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px);
+                                    transform: translateX(-10px); }
+  20%, 40%, 60%, 80%      { -webkit-transform: translateX(10px);
+                                    transform: translateX(10px);  }
 }
 
 .modal-error {
-  animation-name: shake;
-  animation-duration: 0.5s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .feedback-modal {
@@ -2230,5 +2268,3 @@ input[type="radio"].visually-hidden {
 .feedback-modal-form-btn {
   float: right;
 }
-
-
