@@ -2222,11 +2222,14 @@ input[type="radio"].visually-hidden {
 
 .feedback-modal {
   position: fixed;
-  top: 25%;
-  left: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   width: 477px;
-  margin-left: -237px;
+  height: 442px;
+  margin: auto;
   padding-top: 16px;
   padding-left: 24px;
   padding-right: 25px;
