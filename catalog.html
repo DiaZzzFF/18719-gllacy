@@ -105,43 +105,65 @@
               <div class="user-tools-shopping">
                 <a class="user-tools-shopping-btn-full" href="#" aria-label="Ваша корзина">2 товара</a>
 
-                <div class="shopping-box">
+                <form class="shopping-box" action="https://echo.htmlacademy.ru" method="POST">
                   <ul class="shopping-list">
                     <li class="shopping-item">
                       <div class="shopping-item-delete">
-                        <button class="shopping-item-delete-btn" aria-label="Удалить из корзины"></button>
+                        <button class="shopping-item-delete-btn" type="button" aria-label="Удалить из корзины"></button>
                       </div>
+
                       <div class="shopping-item-img shopping-item-img-1"></div>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-heading" id="ice-cream-heading-1" value="Пломбир с апельсиновым джемом">
                       <h3 class="shopping-item-text shopping-item-heading">
                         Пломбир с апельсиновым джемом
                       </h3>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-weight" id="product-weight-1" value="1.5">
                       <p class="shopping-item-text shopping-item-weight">1,5 кг</p>
-                      <p class="shopping-item-text shopping-item-multy">х</p>
+
+                      <p class="shopping-item-text shopping-item-multiply">х</p>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-price" id="ice-cream-price-1" value="200">
                       <p class="shopping-item-text shopping-item-price">200 руб.</p>
-                      <p class="shopping-item-text shopping-item-multy-price">350 руб.</p>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-multiplied-price" id="ice-cream-multiplied-price-1" value="350">
+                      <p class="shopping-item-text shopping-item-multiplied-price">350 руб.</p>
                     </li>
 
                     <li class="shopping-item">
                       <div class="shopping-item-delete">
-                        <button class="shopping-item-delete-btn" aria-label="Удалить из корзины"></button>
+                        <button class="shopping-item-delete-btn" type="button" aria-label="Удалить из корзины"></button>
                       </div>
+
                       <div class="shopping-item-img shopping-item-img-2"></div>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-heading" id="ice-cream-heading-2" value="Клубничный пломбир с присыпкой из белого шоколада">
                       <h3 class="shopping-item-text shopping-item-heading shopping-item-heading-big">
                         Клубничный пломбир с присыпкой
                         из белого шоколада
                       </h3>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-weight" id="product-weight-2" value="1.5">
                       <p class="shopping-item-text shopping-item-weight">1,5 кг</p>
-                      <p class="shopping-item-text shopping-item-multy">х</p>
+
+                      <p class="shopping-item-text shopping-item-multiply">х</p>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-price" id="ice-cream-price-2" value="300">
                       <p class="shopping-item-text shopping-item-price">300 руб.</p>
-                      <p class="shopping-item-text shopping-item-multy-price">450 руб.</p>
+
+                      <input class="visually-hidden" type="text" name="ice-cream-multiplied-price" id="ice-cream-multiplied-price-2" value="450">
+                      <p class="shopping-item-text shopping-item-multiplied-price">450 руб.</p>
                     </li>
                   </ul>
 
+                  <input class="visually-hidden" type="text" name="ice-cream-total-price" id="ice-cream-total-price-all" value="750">
                   <p class="shopping-total-price">
                     Итого: 750 руб.
                   </p>
-                  <a class="orange-btn shopping-btn" href="#">Оформить заказ</a>
-                </div>
+
+                  <button class="orange-btn shopping-btn" type="submit">Оформить заказ</button>
+                </form>
               </div>
             </div>
           </nav>
@@ -509,22 +531,20 @@
           </ul>
         </section>
 
-        <nav class="footer-menu">
-          <ul class="footer-menu-list">
-            <li class="footer-menu-item">
-              <a class="footer-menu-item-special footer-link" href="#">Для поставщиков</a>
-            </li>
-            <li class="footer-menu-item">
-              <a class="footer-link" href="#">Наши документы</a>
-            </li>
-            <li class="footer-menu-item">
-              <a class="footer-link" href="#">О производстве</a>
-            </li>
-            <li class="footer-menu-item">
-              <a class="footer-link" href="#">Экологические стандарты</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="footer-menu-list">
+          <li class="footer-menu-item">
+            <a class="footer-menu-item-special footer-link" href="#">Для поставщиков</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="footer-link" href="#">Наши документы</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="footer-link" href="#">О производстве</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="footer-link" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
 
         <div class="footer-copyright">
           <a class="footer-copyright-logo-link" href="https://htmlacademy.ru/intensive/htmlcss">

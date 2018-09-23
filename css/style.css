@@ -791,7 +791,7 @@ input[type="radio"].visually-hidden {
   margin-right: 3px;
 }
 
-.shopping-item-multy {
+.shopping-item-multiply {
   margin-right: 4px;
 }
 
@@ -1011,10 +1011,20 @@ input[type="radio"].visually-hidden {
   background-color: rgb(255, 255, 255);
 }
 
+/* :hover */
+
 .slide-switch-1:hover ~ .bg-slider label[for="product-1"],
 .slide-switch-2:hover ~ .bg-slider label[for="product-2"],
 .slide-switch-3:hover ~ .bg-slider label[for="product-3"] {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* :focus */
+
+.slide-switch-1:focus ~ .bg-slider label[for="product-1"],
+.slide-switch-2:focus ~ .bg-slider label[for="product-2"],
+.slide-switch-3:focus ~ .bg-slider label[for="product-3"] {
+  outline: 2px solid rgba(38, 136, 233, 0.5);
 }
 
 /* =============== banners */
@@ -1219,6 +1229,7 @@ input[type="radio"].visually-hidden {
 .blog-link {
   display: inline-block;
   vertical-align: middle;
+  width: 55%;
   margin-top: 4px;
 
   font-size: 24px;
@@ -1632,7 +1643,6 @@ input[type="radio"].visually-hidden {
 .filters-form-fat-content-item,
 .filters-form-fillers-item {
   padding-left: 33px;
-
 }
 
 .filters-form-fat-content-item-label,
@@ -1657,12 +1667,23 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+/* :hover */
+
 .filters-form-fat-content-item-pick + .filters-form-fat-content-item-label:hover::before,
 .filters-form-fat-content-item-pick:checked + .filters-form-fat-content-item-label:hover::after,
 .filters-form-fillers-item-pick + .filters-form-fillers-item-label:hover::before,
 .filters-form-fillers-item-pick:checked + .filters-form-fillers-item-label:hover::before {
   opacity: 1;
 }
+
+/* :focus */
+
+.filters-form-fat-content-item-pick:focus + label,
+.filters-form-fillers-item-pick:focus + label {
+  outline: 2px solid rgba(38, 136, 233, 0.5);
+}
+
+/* :disabled */
 
 .filters-form-fat-content-item-pick:disabled + .filters-form-fat-content-item-label::before,
 .filters-form-fat-content-item-pick:disabled + .filters-form-fat-content-item-label::after,
@@ -2053,11 +2074,6 @@ input[type="radio"].visually-hidden {
 
 /* =============== menu */
 
-.footer-menu {
-  max-width: 370px;
-  margin-left: 5.8%;
-}
-
 .footer-menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2065,6 +2081,8 @@ input[type="radio"].visually-hidden {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
+  max-width: 370px;
+  margin-left: 5.8%;
   margin-top: 13px;
   margin-bottom: 19px;
   padding: 0;
